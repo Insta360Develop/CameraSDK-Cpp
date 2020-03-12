@@ -42,7 +42,7 @@ On camera, go to settings, find USB, set it to Android mode.
 #### For ONE R
 On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to Android, Set U-Disk Mode to PC Mode.
 ## <a name="running-demo"/>Running test demo
-
+To be done.
 
 ## <a name="get-started" />Get Started
 ### <a name="connect" />Discover and connect to camera.
