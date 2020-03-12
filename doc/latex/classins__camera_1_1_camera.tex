@@ -1,0 +1,245 @@
+\hypertarget{classins__camera_1_1_camera}{}\doxysection{ins\+\_\+camera\+::Camera Class Reference}
+\label{classins__camera_1_1_camera}\index{ins\_camera::Camera@{ins\_camera::Camera}}
+
+
+A class that represents Insta360 camera,support Insta360 O\+NE X, Insta360 O\+NE R.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classins__camera_1_1_camera_a29304af63f385c6b73230fc4f73d7512}{Camera}} (const \mbox{\hyperlink{structins__camera_1_1_device_connection_info}{Device\+Connection\+Info}} \&info)
+\begin{DoxyCompactList}\small\item\em see also \mbox{\hyperlink{classins__camera_1_1_device_discovery}{Device\+Discovery}} to get \mbox{\hyperlink{structins__camera_1_1_device_connection_info}{Device\+Connection\+Info}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classins__camera_1_1_camera_af0540873ceac88ab3c1e482cb111ba85}{Open}} () const
+\begin{DoxyCompactList}\small\item\em Open camera and start session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classins__camera_1_1_camera_a0da6598a2971559e0d84e4bf2a6705c4}{Close}} () const
+\begin{DoxyCompactList}\small\item\em Close camera and release resources. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classins__camera_1_1_camera_a73f3787fc26885924ccb433fa2512fe8}{Get\+Serial\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Get the serial number from camera. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classins__camera_1_1_camera_aa4bead281702716de4589b03206cf6a8}{Take\+Photo}} () const
+\begin{DoxyCompactList}\small\item\em Control camera to take photo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classins__camera_1_1_camera_a39a2c3f4b097594671fa365e94b4aff2}{Set\+Exposure\+Settings}} (\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}} mode, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classins__camera_1_1_exposure_settings}{Exposure\+Settings}} $>$ settings)
+\begin{DoxyCompactList}\small\item\em set exposure settings, the settings will only be applied to specified mode \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classins__camera_1_1_exposure_settings}{Exposure\+Settings}} $>$ \mbox{\hyperlink{classins__camera_1_1_camera_a3de3fa876e6b2205774919a8b18f6ec3}{Get\+Exposure\+Settings}} (\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}} mode) const
+\item 
+bool \mbox{\hyperlink{classins__camera_1_1_camera_ab17afc48ecc2afc1dcf4ab01577e8e48}{Set\+Capture\+Settings}} (\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}} mode, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}} $>$ settings)
+\begin{DoxyCompactList}\small\item\em set capture settings, the settings will only be applied to specified mode \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}} $>$ \mbox{\hyperlink{classins__camera_1_1_camera_a8c63847240c7f61497bd7400a77184a9}{Get\+Capture\+Settings}} (\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}} mode) const
+\item 
+bool \mbox{\hyperlink{classins__camera_1_1_camera_a798f849e627c42fdfc5b78595dbe9a38}{Set\+Video\+Capture\+Params}} (\mbox{\hyperlink{structins__camera_1_1_record_params}{Record\+Params}} params, \mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}} mode=Camera\+Function\+Mode\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+V\+I\+D\+EO)
+\begin{DoxyCompactList}\small\item\em set capture settings such as resolutions, bitrate, \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classins__camera_1_1_camera_a69e315f680fe4276f6f8860991dfc7ce}{Start\+Recording}} ()
+\begin{DoxyCompactList}\small\item\em Start Recording. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classins__camera_1_1_camera_aea4de7b0be229a71b06b4761b63e550c}{Stop\+Recording}} ()
+\begin{DoxyCompactList}\small\item\em Stop Recording. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classins__camera_1_1_camera_a1420e8b3c70858bb52a149cc3323630f}{Delete\+Camera\+File}} (const std\+::string \&file\+Path) const
+\begin{DoxyCompactList}\small\item\em Delete the specified file from camera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classins__camera_1_1_camera_a0b6b12fb302bb86ffa2ba0662f9ea6ba}{Download\+Camera\+File}} (const std\+::string \&remote\+File\+Path, const std\+::string \&local\+File\+Path) const
+\begin{DoxyCompactList}\small\item\em Download the specified file from camera. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classins__camera_1_1_camera_aa023f2a2b2ee095095c67fa7a05dde8b}{Get\+Camera\+Files\+List}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of files stored in camera storage card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents Insta360 camera,support Insta360 O\+NE X, Insta360 O\+NE R. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classins__camera_1_1_camera_a29304af63f385c6b73230fc4f73d7512}\label{classins__camera_1_1_camera_a29304af63f385c6b73230fc4f73d7512}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily ins\+\_\+camera\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structins__camera_1_1_device_connection_info}{Device\+Connection\+Info}} \&}]{info }\end{DoxyParamCaption})}
+
+
+
+see also \mbox{\hyperlink{classins__camera_1_1_device_discovery}{Device\+Discovery}} to get \mbox{\hyperlink{structins__camera_1_1_device_connection_info}{Device\+Connection\+Info}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classins__camera_1_1_camera_a0da6598a2971559e0d84e4bf2a6705c4}\label{classins__camera_1_1_camera_a0da6598a2971559e0d84e4bf2a6705c4}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!Close@{Close}}
+\index{Close@{Close}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void ins\+\_\+camera\+::\+Camera\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Close camera and release resources. 
+
+\mbox{\Hypertarget{classins__camera_1_1_camera_a1420e8b3c70858bb52a149cc3323630f}\label{classins__camera_1_1_camera_a1420e8b3c70858bb52a149cc3323630f}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!DeleteCameraFile@{DeleteCameraFile}}
+\index{DeleteCameraFile@{DeleteCameraFile}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{DeleteCameraFile()}{DeleteCameraFile()}}
+{\footnotesize\ttfamily bool ins\+\_\+camera\+::\+Camera\+::\+Delete\+Camera\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const}
+
+
+
+Delete the specified file from camera. 
+
+\mbox{\Hypertarget{classins__camera_1_1_camera_a0b6b12fb302bb86ffa2ba0662f9ea6ba}\label{classins__camera_1_1_camera_a0b6b12fb302bb86ffa2ba0662f9ea6ba}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!DownloadCameraFile@{DownloadCameraFile}}
+\index{DownloadCameraFile@{DownloadCameraFile}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{DownloadCameraFile()}{DownloadCameraFile()}}
+{\footnotesize\ttfamily bool ins\+\_\+camera\+::\+Camera\+::\+Download\+Camera\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{remote\+File\+Path,  }\item[{const std\+::string \&}]{local\+File\+Path }\end{DoxyParamCaption}) const}
+
+
+
+Download the specified file from camera. 
+
+\mbox{\Hypertarget{classins__camera_1_1_camera_aa023f2a2b2ee095095c67fa7a05dde8b}\label{classins__camera_1_1_camera_aa023f2a2b2ee095095c67fa7a05dde8b}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!GetCameraFilesList@{GetCameraFilesList}}
+\index{GetCameraFilesList@{GetCameraFilesList}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{GetCameraFilesList()}{GetCameraFilesList()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ ins\+\_\+camera\+::\+Camera\+::\+Get\+Camera\+Files\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the list of files stored in camera storage card. 
+
+\mbox{\Hypertarget{classins__camera_1_1_camera_a8c63847240c7f61497bd7400a77184a9}\label{classins__camera_1_1_camera_a8c63847240c7f61497bd7400a77184a9}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!GetCaptureSettings@{GetCaptureSettings}}
+\index{GetCaptureSettings@{GetCaptureSettings}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{GetCaptureSettings()}{GetCaptureSettings()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}}$>$ ins\+\_\+camera\+::\+Camera\+::\+Get\+Capture\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}}}]{mode }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classins__camera_1_1_camera_a3de3fa876e6b2205774919a8b18f6ec3}\label{classins__camera_1_1_camera_a3de3fa876e6b2205774919a8b18f6ec3}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!GetExposureSettings@{GetExposureSettings}}
+\index{GetExposureSettings@{GetExposureSettings}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{GetExposureSettings()}{GetExposureSettings()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classins__camera_1_1_exposure_settings}{Exposure\+Settings}}$>$ ins\+\_\+camera\+::\+Camera\+::\+Get\+Exposure\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}}}]{mode }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classins__camera_1_1_camera_a73f3787fc26885924ccb433fa2512fe8}\label{classins__camera_1_1_camera_a73f3787fc26885924ccb433fa2512fe8}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!GetSerialNumber@{GetSerialNumber}}
+\index{GetSerialNumber@{GetSerialNumber}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{GetSerialNumber()}{GetSerialNumber()}}
+{\footnotesize\ttfamily std\+::string ins\+\_\+camera\+::\+Camera\+::\+Get\+Serial\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the serial number from camera. 
+
+\begin{DoxyReturn}{Returns}
+The serial number string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classins__camera_1_1_camera_af0540873ceac88ab3c1e482cb111ba85}\label{classins__camera_1_1_camera_af0540873ceac88ab3c1e482cb111ba85}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!Open@{Open}}
+\index{Open@{Open}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily bool ins\+\_\+camera\+::\+Camera\+::\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Open camera and start session. 
+
+\begin{DoxyReturn}{Returns}
+true if succeed, otherwise return false; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classins__camera_1_1_camera_ab17afc48ecc2afc1dcf4ab01577e8e48}\label{classins__camera_1_1_camera_ab17afc48ecc2afc1dcf4ab01577e8e48}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!SetCaptureSettings@{SetCaptureSettings}}
+\index{SetCaptureSettings@{SetCaptureSettings}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{SetCaptureSettings()}{SetCaptureSettings()}}
+{\footnotesize\ttfamily bool ins\+\_\+camera\+::\+Camera\+::\+Set\+Capture\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}}}]{mode,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}} $>$}]{settings }\end{DoxyParamCaption})}
+
+
+
+set capture settings, the settings will only be applied to specified mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & the target mode you want to apply exposure settings, for normal video recording, use Camera\+Function\+Mode\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+V\+I\+D\+EO, for normal still image capture, use Capera\+Function\+Mode\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+I\+M\+A\+GE. \\
+\hline
+{\em settings} & \mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}} containing capture settings like saturation,contrast,whitebalance,sharpness,brightness and etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classins__camera_1_1_camera_a39a2c3f4b097594671fa365e94b4aff2}\label{classins__camera_1_1_camera_a39a2c3f4b097594671fa365e94b4aff2}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!SetExposureSettings@{SetExposureSettings}}
+\index{SetExposureSettings@{SetExposureSettings}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{SetExposureSettings()}{SetExposureSettings()}}
+{\footnotesize\ttfamily bool ins\+\_\+camera\+::\+Camera\+::\+Set\+Exposure\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}}}]{mode,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classins__camera_1_1_exposure_settings}{Exposure\+Settings}} $>$}]{settings }\end{DoxyParamCaption})}
+
+
+
+set exposure settings, the settings will only be applied to specified mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & the target mode you want to apply exposure settings, for normal video recording, use Camera\+Function\+Mode\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+V\+I\+D\+EO, for normal still image capture, use Capera\+Function\+Mode\+::\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+I\+M\+A\+GE. \\
+\hline
+{\em settings} & \mbox{\hyperlink{classins__camera_1_1_exposure_settings}{Exposure\+Settings}} containing exposure mode/iso/shutter/ev to be applied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classins__camera_1_1_camera_a798f849e627c42fdfc5b78595dbe9a38}\label{classins__camera_1_1_camera_a798f849e627c42fdfc5b78595dbe9a38}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!SetVideoCaptureParams@{SetVideoCaptureParams}}
+\index{SetVideoCaptureParams@{SetVideoCaptureParams}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{SetVideoCaptureParams()}{SetVideoCaptureParams()}}
+{\footnotesize\ttfamily bool ins\+\_\+camera\+::\+Camera\+::\+Set\+Video\+Capture\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structins__camera_1_1_record_params}{Record\+Params}}}]{params,  }\item[{\mbox{\hyperlink{namespaceins__camera_a3b31bf5dd11b187fcfb4aa48eb5f5774}{Camera\+Function\+Mode}}}]{mode = {\ttfamily CameraFunctionMode\+:\+:FUNCTION\+\_\+MODE\+\_\+NORMAL\+\_\+VIDEO} }\end{DoxyParamCaption})}
+
+
+
+set capture settings such as resolutions, bitrate, 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & \mbox{\hyperlink{structins__camera_1_1_record_params}{Record\+Params}} containing settings you want to apply \\
+\hline
+{\em mode} & the target mode you want to apply capture settings, the mode must be one of video modes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classins__camera_1_1_camera_a69e315f680fe4276f6f8860991dfc7ce}\label{classins__camera_1_1_camera_a69e315f680fe4276f6f8860991dfc7ce}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!StartRecording@{StartRecording}}
+\index{StartRecording@{StartRecording}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{StartRecording()}{StartRecording()}}
+{\footnotesize\ttfamily bool ins\+\_\+camera\+::\+Camera\+::\+Start\+Recording (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start Recording. 
+
+\begin{DoxyReturn}{Returns}
+true on success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classins__camera_1_1_camera_aea4de7b0be229a71b06b4761b63e550c}\label{classins__camera_1_1_camera_aea4de7b0be229a71b06b4761b63e550c}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!StopRecording@{StopRecording}}
+\index{StopRecording@{StopRecording}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{StopRecording()}{StopRecording()}}
+{\footnotesize\ttfamily std\+::string ins\+\_\+camera\+::\+Camera\+::\+Stop\+Recording (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop Recording. 
+
+\begin{DoxyReturn}{Returns}
+the low bitrate proxy video uri of the recorded video on camera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classins__camera_1_1_camera_aa4bead281702716de4589b03206cf6a8}\label{classins__camera_1_1_camera_aa4bead281702716de4589b03206cf6a8}} 
+\index{ins\_camera::Camera@{ins\_camera::Camera}!TakePhoto@{TakePhoto}}
+\index{TakePhoto@{TakePhoto}!ins\_camera::Camera@{ins\_camera::Camera}}
+\doxysubsubsection{\texorpdfstring{TakePhoto()}{TakePhoto()}}
+{\footnotesize\ttfamily std\+::string ins\+\_\+camera\+::\+Camera\+::\+Take\+Photo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Control camera to take photo. 
+
+\begin{DoxyReturn}{Returns}
+The url of the photo if success, otherwise empty string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/camera/\mbox{\hyperlink{camera_8h}{camera.\+h}}\end{DoxyCompactItemize}
