@@ -43,11 +43,11 @@ We need to switch the camera to correct mode before we can connect and control i
 
 You need to upgrade to  a special version of firmware, [download here](https://insta360-dev.oss-cn-hangzhou.aliyuncs.com/developer/releases/a33b3362-4767-47c3-ba9d-6ed07febb210.zip)
 
-After upgraded, on camera, go to settings, find USB, set it to Android mode.
+After upgraded, on camera, go to settings, find USB, set it to **Android** mode.
 
 #### For ONE R
 
-On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to Android, Set U-Disk Mode to PC Mode.
+On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**, Set U-Disk Mode to **Mobile** Mode.
 
 ### <a name="install-driver" />Install Driver
 
