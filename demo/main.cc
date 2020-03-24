@@ -4,17 +4,50 @@
 #include <camera/photography_settings.h>
 #include <camera/device_discovery.h>
 #include <llog/llog.h>
+#include <regex>
+
+class TestStreamDelegate: public ins_camera::StreamDelegate {
+public:
+    TestStreamDelegate() {
+        file_ = fopen("/Users/capjason/Desktop/1.h264", "wb");
+    }
+    ~TestStreamDelegate() {
+        fclose(file_);
+    }
+    
+    void OnAudioData(const uint8_t* data, size_t size, int64_t timestamp) override {
+//        LOG(INFO) << "on audio data:" << timestamp;
+    }
+    void OnVideoData(const uint8_t* data,size_t size, int64_t timestamp,int stream_index = 0) override {
+//        LOG(INFO) << "on video frame:" << size << ";" << timestamp;
+        if(stream_index == 0) {
+            fwrite(data, sizeof(uint8_t), size, file_);
+        }
+    }
+    void OnGyroData(const std::vector<ins_camera::GyroData>& data) override {
+//        LOG(INFO) << "on gyro data:" << data.timestamp;
+    }
+    void OnExposureData(const ins_camera::ExposureData& data) override {
+        std::cout << "time:" << std::setprecision(10) << data.timestamp << ";exposure:" << data.exposure_time << std::endl;
+    }
+    
+private:
+    FILE* file_;
+};
 
 int main(int argc, char* argv[])
-{
-
+{    
+    ins::Configuration::GetInstance().Configure(ins::Configuration::LOG_LEVEL, "INFO");
+     std::cout << "begin open camera" << std::endl;
     ins_camera::DeviceDiscovery discovery;
     auto list = discovery.GetAvailableDevices();
     for(int i = 0;i < list.size(); ++i) {
         auto desc = list[i];
-        LOG(INFO) << "device:" << desc.serial_number;
+        LOG(INFO) << "serial:" << desc.serial_number <<"\t"
+                    << "camera type:" << int(desc.camera_type) << "\t"
+                    << "lens type:" << int(desc.lens_type);
     }
-
+     
     if (list.size() <= 0) {
         LOG(ERROR) << "no device found.";
         return -1;
@@ -25,8 +58,11 @@ int main(int argc, char* argv[])
 		std::cout << "failed to open camera" << std::endl;
 		return -1;
 	}
+    
+    std::shared_ptr<ins_camera::StreamDelegate> delegate = std::make_shared<TestStreamDelegate>();
+    cam.SetStreamDelegate(delegate);
 
-    discovery.FreeDeviceDescriptors(list);
+	discovery.FreeDeviceDescriptors(list);
 
 	std::cout << "Succeed to open camera..." << std::endl;
 
@@ -46,7 +82,7 @@ int main(int argc, char* argv[])
 	while (true) {
 		std::cout << "please enter index: ";
 		std::cin >> option;
-		if (option < 0 || option > 10) {
+		if (option < 0 || option > 20) {
 			std::cout << "Invalid index" << std::endl;
 			return 0;
 		}
@@ -58,11 +94,11 @@ int main(int argc, char* argv[])
 		// take photo
 		if (option == 1) {
 			const auto url = cam.TakePhoto();
-			if (url.empty()) {
+			if (!url.isSingleOrigin() || url.Empty()) {
 				std::cout << "failed to take picture" << std::endl;
 				return -1;
 			}
-			std::cout << "Take picture done: " << url << std::endl;
+			std::cout << "Take picture done: " << url.GetSingleOrigin() << std::endl;
 		}
 
 		// get serial number from camera
@@ -115,7 +151,7 @@ int main(int argc, char* argv[])
         if (option == 6) {
             if (!cam.SetVideoCaptureParams({
                     ins_camera::VideoResolution::RES_2880_2880P30,
-                    1024 * 1024 * 60
+                    1024 * 1024 * 90
                 })) {
                 LOG(ERROR) << "failed to set capture settings.";
             }
@@ -132,7 +168,15 @@ int main(int argc, char* argv[])
 
         if (option == 7) {
             auto url = cam.StopRecording();
-            LOG(INFO) << "stop recording success, url:" << url;
+            if(url.Empty()) {
+                LOG(ERROR) << "stop recording failed";
+                continue;
+            }
+            auto& origins = url.OriginUrls();
+            LOG(INFO) << "stop recording success";
+            for(auto& origin_url: origins) {
+                LOG(INFO) << "url:" << origin_url;
+            }
         }
 
         if (option == 8) {
@@ -164,8 +208,24 @@ int main(int argc, char* argv[])
                 LOG(ERROR) << "failed to set capture settings";
             }
         }
+        
+        if(option == 10) {
+            ins_camera::LiveStreamParam param;
+            param.video_resolution = ins_camera::VideoResolution::RES_960_480P30;
+            param.lrv_video_resulution = ins_camera::VideoResolution::RES_720_360P30;
+            param.using_lrv = false;
+            if(cam.StartLiveStreaming(param)) {
+                LOG(INFO) << "successfully started live stream";
+            }
+        }
+        if (option == 11) {
+            if(cam.StopLiveStreaming()) {
+                LOG(INFO) << "success!";
+            } else {
+                LOG(ERROR) << "failed to stop live.";
+            }
+        }
 	}
-
 	cam.Close();
 	return 0;
 }

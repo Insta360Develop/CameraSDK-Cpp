@@ -117,10 +117,12 @@ We try to simplify the SDK to make integration for developers more easily.
 ```C++ 
 #include <camera/camera.h>
 ...
-auto url = cam.TakePicture();
-if(!url.empty()) {
-  std::cout << "picture has been saved to url:" << url << std::endl; //url is the path to the picture on camera, like /DCIM/Camera01/IMG_20200312_112432_00_260.jpg
+const auto url = cam.TakePhoto();
+if (url.Empty()) {
+    std::cout << "failed to take picture" << std::endl;
+    return -1;
 }
+std::cout << "Take picture done: " << url.GetSingleOrigin() << std::endl;
 ```
 Once camera be opened, a http tunnel is created on http://localhost:9099. You could make a http request to access the image on camera.
 The full url might like this: http://localhost:9099/DCIM/Camera01/IMG_20200312_113006_00_261.jpg
@@ -148,11 +150,17 @@ if (!cam.SetVideoCaptureParams({ins_camera::VideoResolution::RES_3840_2160p30,
 #include <camera/camera.h>
 ...
 auto url = cam.StopRecording();
-if(!url.empty()) {
-   std::cout << "picture has been saved to url:" << url << std::endl; //url is the path to the video on camera
+if(url.Empty()) {
+    LOG(ERROR) << "stop recording failed";
+    continue;
+}
+auto& origins = url.OriginUrls();
+LOG(INFO) << "stop recording success";
+for(auto& origin_url: origins) {
+    LOG(INFO) << "url:" << origin_url;
 }
 ```
-Same as Picture, you can access the video via http request.
+Same as Picture, you can access the video via http request. The returned MediaUrl instance may contains multiple origin urls as well as low bitrate video urls.
 
 ### <a name="exposure-settings" />Set Exposure Settings
 Exposure settings are independent between function modes(like TakePicture and Recording). So you need to specify function mode when you set exposure settings.
