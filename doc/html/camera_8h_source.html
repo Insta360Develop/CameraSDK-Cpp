@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CameraSDK: include/camera/camera.h Source File</title>
+<title>CameraSDK: camera/camera.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -26,7 +22,6 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CameraSDK
-   &#160;<span id="projectnumber">1.0.0</span>
    </div>
   </td>
  </tr>
@@ -50,23 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('camera_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,6 +59,11 @@ $(document).ready(function(){initNavTree('camera_8h_source.html',''); initResiza
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8d9433177dc817784c962bbda0fc1c03.html">camera</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">camera.h</div>  </div>
@@ -93,74 +76,72 @@ $(document).ready(function(){initNavTree('camera_8h_source.html',''); initResiza
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ins__types_8h.html">ins_types.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="photography__settings_8h.html">photography_settings.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespaceins__camera.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceins__camera.html">ins_camera</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">class </span>CameraImpl;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classins__camera_1_1_camera.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classins__camera_1_1_camera.html">Camera</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classins__camera_1_1_camera.html#a29304af63f385c6b73230fc4f73d7512">Camera</a>(<span class="keyword">const</span> <a class="code" href="structins__camera_1_1_device_connection_info.html">DeviceConnectionInfo</a>&amp; info);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85">Open</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classins__camera_1_1_camera.html#a0da6598a2971559e0d84e4bf2a6705c4">Close</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::string <a class="code" href="classins__camera_1_1_camera.html#a73f3787fc26885924ccb433fa2512fe8">GetSerialNumber</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::string <a class="code" href="classins__camera_1_1_camera.html#aa4bead281702716de4589b03206cf6a8">TakePhoto</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classins__camera_1_1_camera.html#a39a2c3f4b097594671fa365e94b4aff2">SetExposureSettings</a>(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode,std::shared_ptr&lt;ExposureSettings&gt; settings);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../stream/stream_delegate.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespaceins__camera.html">    9</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceins__camera.html">ins_camera</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">class </span>CameraImpl;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classins__camera_1_1_camera.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="ins__types_8h.html#a5ad45bc9a71efdbcc1b71db2a3f68139">CAMERASDK_API</a> <a class="code" href="classins__camera_1_1_camera.html">Camera</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classins__camera_1_1_camera.html">Camera</a>(<span class="keyword">const</span> <a class="code" href="structins__camera_1_1_device_connection_info.html">DeviceConnectionInfo</a>&amp; info);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">bool</span> Open() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> Close() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::string GetSerialNumber() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9d">CameraType</a> GetCameraType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0c">CameraLensType</a> GetCameraLensType() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::shared_ptr&lt;ExposureSettings&gt; <a class="code" href="classins__camera_1_1_camera.html#a3de3fa876e6b2205774919a8b18f6ec3">GetExposureSettings</a>(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classins__camera_1_1_camera.html#ab17afc48ecc2afc1dcf4ab01577e8e48">SetCaptureSettings</a>(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode, std::shared_ptr&lt;CaptureSettings&gt; settings);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::shared_ptr&lt;CaptureSettings&gt; <a class="code" href="classins__camera_1_1_camera.html#a8c63847240c7f61497bd7400a77184a9">GetCaptureSettings</a>(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classins__camera_1_1_camera.html#a798f849e627c42fdfc5b78595dbe9a38">SetVideoCaptureParams</a>(<a class="code" href="structins__camera_1_1_record_params.html">RecordParams</a> params,<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode = <a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774a660adb40e9dd4bcdd78fa9a49f521640">CameraFunctionMode::FUNCTION_MODE_NORMAL_VIDEO</a>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classins__camera_1_1_camera.html#a69e315f680fe4276f6f8860991dfc7ce">StartRecording</a>() ;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::string <a class="code" href="classins__camera_1_1_camera.html#aea4de7b0be229a71b06b4761b63e550c">StopRecording</a>() ;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classins__camera_1_1_camera.html#a1420e8b3c70858bb52a149cc3323630f">DeleteCameraFile</a>(<span class="keyword">const</span> std::string&amp; filePath) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classins__camera_1_1_camera.html#a0b6b12fb302bb86ffa2ba0662f9ea6ba">DownloadCameraFile</a>(<span class="keyword">const</span> std::string&amp; remoteFilePath, <span class="keyword">const</span> std::string&amp; localFilePath) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="classins__camera_1_1_camera.html#aa023f2a2b2ee095095c67fa7a05dde8b">GetCameraFilesList</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        std::shared_ptr&lt;CameraImpl&gt; impl_;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    };</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classins__camera_1_1_media_url.html">MediaUrl</a> TakePhoto() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">bool</span> SetExposureSettings(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode,std::shared_ptr&lt;ExposureSettings&gt; settings);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::shared_ptr&lt;ExposureSettings&gt; GetExposureSettings(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">bool</span> SetCaptureSettings(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode, std::shared_ptr&lt;CaptureSettings&gt; settings);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::shared_ptr&lt;CaptureSettings&gt; GetCaptureSettings(<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">bool</span> SetVideoCaptureParams(<a class="code" href="structins__camera_1_1_record_params.html">RecordParams</a> params,<a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">CameraFunctionMode</a> mode = <a class="code" href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774a660adb40e9dd4bcdd78fa9a49f521640">CameraFunctionMode::FUNCTION_MODE_NORMAL_VIDEO</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">bool</span> StartRecording() ;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classins__camera_1_1_media_url.html">MediaUrl</a> StopRecording() ;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">bool</span> StartLiveStreaming(<span class="keyword">const</span> <a class="code" href="structins__camera_1_1_live_stream_param.html">LiveStreamParam</a>&amp; param);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">bool</span> StopLiveStreaming();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">void</span> SetStreamDelegate(std::shared_ptr&lt;StreamDelegate&gt;&amp; delegate);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">bool</span> DeleteCameraFile(<span class="keyword">const</span> std::string&amp; filePath) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">bool</span> DownloadCameraFile(<span class="keyword">const</span> std::string&amp; remoteFilePath, <span class="keyword">const</span> std::string&amp; localFilePath) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        std::vector&lt;std::string&gt; GetCameraFilesList() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        std::shared_ptr&lt;CameraImpl&gt; impl_;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    };</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a0da6598a2971559e0d84e4bf2a6705c4"><div class="ttname"><a href="classins__camera_1_1_camera.html#a0da6598a2971559e0d84e4bf2a6705c4">ins_camera::Camera::Close</a></div><div class="ttdeci">void Close() const</div><div class="ttdoc">Close camera and release resources.</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a39a2c3f4b097594671fa365e94b4aff2"><div class="ttname"><a href="classins__camera_1_1_camera.html#a39a2c3f4b097594671fa365e94b4aff2">ins_camera::Camera::SetExposureSettings</a></div><div class="ttdeci">bool SetExposureSettings(CameraFunctionMode mode, std::shared_ptr&lt; ExposureSettings &gt; settings)</div><div class="ttdoc">set exposure settings, the settings will only be applied to specified mode</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a8c63847240c7f61497bd7400a77184a9"><div class="ttname"><a href="classins__camera_1_1_camera.html#a8c63847240c7f61497bd7400a77184a9">ins_camera::Camera::GetCaptureSettings</a></div><div class="ttdeci">std::shared_ptr&lt; CaptureSettings &gt; GetCaptureSettings(CameraFunctionMode mode) const</div></div>
-<div class="ttc" id="anamespaceins__camera_html"><div class="ttname"><a href="namespaceins__camera.html">ins_camera</a></div><div class="ttdef"><b>Definition:</b> camera.h:8</div></div>
-<div class="ttc" id="astructins__camera_1_1_record_params_html"><div class="ttname"><a href="structins__camera_1_1_record_params.html">ins_camera::RecordParams</a></div><div class="ttdef"><b>Definition:</b> photography_settings.h:177</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_ab17afc48ecc2afc1dcf4ab01577e8e48"><div class="ttname"><a href="classins__camera_1_1_camera.html#ab17afc48ecc2afc1dcf4ab01577e8e48">ins_camera::Camera::SetCaptureSettings</a></div><div class="ttdeci">bool SetCaptureSettings(CameraFunctionMode mode, std::shared_ptr&lt; CaptureSettings &gt; settings)</div><div class="ttdoc">set capture settings, the settings will only be applied to specified mode</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_connection_info_html"><div class="ttname"><a href="structins__camera_1_1_device_connection_info.html">ins_camera::DeviceConnectionInfo</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:20</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a1420e8b3c70858bb52a149cc3323630f"><div class="ttname"><a href="classins__camera_1_1_camera.html#a1420e8b3c70858bb52a149cc3323630f">ins_camera::Camera::DeleteCameraFile</a></div><div class="ttdeci">bool DeleteCameraFile(const std::string &amp;filePath) const</div><div class="ttdoc">Delete the specified file from camera.</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_af0540873ceac88ab3c1e482cb111ba85"><div class="ttname"><a href="classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85">ins_camera::Camera::Open</a></div><div class="ttdeci">bool Open() const</div><div class="ttdoc">Open camera and start session.</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a0b6b12fb302bb86ffa2ba0662f9ea6ba"><div class="ttname"><a href="classins__camera_1_1_camera.html#a0b6b12fb302bb86ffa2ba0662f9ea6ba">ins_camera::Camera::DownloadCameraFile</a></div><div class="ttdeci">bool DownloadCameraFile(const std::string &amp;remoteFilePath, const std::string &amp;localFilePath) const</div><div class="ttdoc">Download the specified file from camera.</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a69e315f680fe4276f6f8860991dfc7ce"><div class="ttname"><a href="classins__camera_1_1_camera.html#a69e315f680fe4276f6f8860991dfc7ce">ins_camera::Camera::StartRecording</a></div><div class="ttdeci">bool StartRecording()</div><div class="ttdoc">Start Recording.</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_aea4de7b0be229a71b06b4761b63e550c"><div class="ttname"><a href="classins__camera_1_1_camera.html#aea4de7b0be229a71b06b4761b63e550c">ins_camera::Camera::StopRecording</a></div><div class="ttdeci">std::string StopRecording()</div><div class="ttdoc">Stop Recording.</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a3b31bf5dd11b187fcfb4aa48eb5f5774a660adb40e9dd4bcdd78fa9a49f521640"><div class="ttname"><a href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774a660adb40e9dd4bcdd78fa9a49f521640">ins_camera::FUNCTION_MODE_NORMAL_VIDEO</a></div><div class="ttdeci">@ FUNCTION_MODE_NORMAL_VIDEO</div><div class="ttdef"><b>Definition:</b> photography_settings.h:8</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a3de3fa876e6b2205774919a8b18f6ec3"><div class="ttname"><a href="classins__camera_1_1_camera.html#a3de3fa876e6b2205774919a8b18f6ec3">ins_camera::Camera::GetExposureSettings</a></div><div class="ttdeci">std::shared_ptr&lt; ExposureSettings &gt; GetExposureSettings(CameraFunctionMode mode) const</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a73f3787fc26885924ccb433fa2512fe8"><div class="ttname"><a href="classins__camera_1_1_camera.html#a73f3787fc26885924ccb433fa2512fe8">ins_camera::Camera::GetSerialNumber</a></div><div class="ttdeci">std::string GetSerialNumber() const</div><div class="ttdoc">Get the serial number from camera.</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_aa4bead281702716de4589b03206cf6a8"><div class="ttname"><a href="classins__camera_1_1_camera.html#aa4bead281702716de4589b03206cf6a8">ins_camera::Camera::TakePhoto</a></div><div class="ttdeci">std::string TakePhoto() const</div><div class="ttdoc">Control camera to take photo.</div></div>
+<div class="ttc" id="anamespaceins__camera_html"><div class="ttname"><a href="namespaceins__camera.html">ins_camera</a></div><div class="ttdef"><b>Definition:</b> camera.h:9</div></div>
+<div class="ttc" id="astructins__camera_1_1_record_params_html"><div class="ttname"><a href="structins__camera_1_1_record_params.html">ins_camera::RecordParams</a></div><div class="ttdef"><b>Definition:</b> photography_settings.h:188</div></div>
+<div class="ttc" id="ains__types_8h_html_a5ad45bc9a71efdbcc1b71db2a3f68139"><div class="ttname"><a href="ins__types_8h.html#a5ad45bc9a71efdbcc1b71db2a3f68139">CAMERASDK_API</a></div><div class="ttdeci">#define CAMERASDK_API</div><div class="ttdef"><b>Definition:</b> ins_types.h:5</div></div>
+<div class="ttc" id="astructins__camera_1_1_device_connection_info_html"><div class="ttname"><a href="structins__camera_1_1_device_connection_info.html">ins_camera::DeviceConnectionInfo</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:34</div></div>
+<div class="ttc" id="anamespaceins__camera_html_aa595c7ba3ea7d4fd2be58cec23ed7a9d"><div class="ttname"><a href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9d">ins_camera::CameraType</a></div><div class="ttdeci">CameraType</div><div class="ttdef"><b>Definition:</b> ins_types.h:15</div></div>
+<div class="ttc" id="anamespaceins__camera_html_a3b31bf5dd11b187fcfb4aa48eb5f5774a660adb40e9dd4bcdd78fa9a49f521640"><div class="ttname"><a href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774a660adb40e9dd4bcdd78fa9a49f521640">ins_camera::FUNCTION_MODE_NORMAL_VIDEO</a></div><div class="ttdeci">@ FUNCTION_MODE_NORMAL_VIDEO</div><div class="ttdef"><b>Definition:</b> photography_settings.h:18</div></div>
+<div class="ttc" id="aclassins__camera_1_1_media_url_html"><div class="ttname"><a href="classins__camera_1_1_media_url.html">ins_camera::MediaUrl</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:47</div></div>
 <div class="ttc" id="aphotography__settings_8h_html"><div class="ttname"><a href="photography__settings_8h.html">photography_settings.h</a></div></div>
-<div class="ttc" id="anamespaceins__camera_html_a3b31bf5dd11b187fcfb4aa48eb5f5774"><div class="ttname"><a href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">ins_camera::CameraFunctionMode</a></div><div class="ttdeci">CameraFunctionMode</div><div class="ttdef"><b>Definition:</b> photography_settings.h:6</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html"><div class="ttname"><a href="classins__camera_1_1_camera.html">ins_camera::Camera</a></div><div class="ttdoc">A class that represents Insta360 camera,support Insta360 ONE X, Insta360 ONE R.</div><div class="ttdef"><b>Definition:</b> camera.h:15</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a798f849e627c42fdfc5b78595dbe9a38"><div class="ttname"><a href="classins__camera_1_1_camera.html#a798f849e627c42fdfc5b78595dbe9a38">ins_camera::Camera::SetVideoCaptureParams</a></div><div class="ttdeci">bool SetVideoCaptureParams(RecordParams params, CameraFunctionMode mode=CameraFunctionMode::FUNCTION_MODE_NORMAL_VIDEO)</div><div class="ttdoc">set capture settings such as resolutions, bitrate,</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_a29304af63f385c6b73230fc4f73d7512"><div class="ttname"><a href="classins__camera_1_1_camera.html#a29304af63f385c6b73230fc4f73d7512">ins_camera::Camera::Camera</a></div><div class="ttdeci">Camera(const DeviceConnectionInfo &amp;info)</div><div class="ttdoc">see also DeviceDiscovery to get DeviceConnectionInfo.</div></div>
-<div class="ttc" id="aclassins__camera_1_1_camera_html_aa023f2a2b2ee095095c67fa7a05dde8b"><div class="ttname"><a href="classins__camera_1_1_camera.html#aa023f2a2b2ee095095c67fa7a05dde8b">ins_camera::Camera::GetCameraFilesList</a></div><div class="ttdeci">std::vector&lt; std::string &gt; GetCameraFilesList() const</div><div class="ttdoc">Get the list of files stored in camera storage card.</div></div>
+<div class="ttc" id="anamespaceins__camera_html_a3b31bf5dd11b187fcfb4aa48eb5f5774"><div class="ttname"><a href="namespaceins__camera.html#a3b31bf5dd11b187fcfb4aa48eb5f5774">ins_camera::CameraFunctionMode</a></div><div class="ttdeci">CameraFunctionMode</div><div class="ttdef"><b>Definition:</b> photography_settings.h:16</div></div>
+<div class="ttc" id="aclassins__camera_1_1_camera_html"><div class="ttname"><a href="classins__camera_1_1_camera.html">ins_camera::Camera</a></div><div class="ttdoc">A class that represents Insta360 camera,support Insta360 ONE X, Insta360 ONE R.</div><div class="ttdef"><b>Definition:</b> camera.h:16</div></div>
+<div class="ttc" id="anamespaceins__camera_html_a3ac2b899f038ed09bf40ebcfcc8cfc0c"><div class="ttname"><a href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0c">ins_camera::CameraLensType</a></div><div class="ttdeci">CameraLensType</div><div class="ttdef"><b>Definition:</b> ins_types.h:21</div></div>
 <div class="ttc" id="ains__types_8h_html"><div class="ttname"><a href="ins__types_8h.html">ins_types.h</a></div></div>
+<div class="ttc" id="astructins__camera_1_1_live_stream_param_html"><div class="ttname"><a href="structins__camera_1_1_live_stream_param.html">ins_camera::LiveStreamParam</a></div><div class="ttdef"><b>Definition:</b> photography_settings.h:193</div></div>
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_46b4ca9cfc9a703c87a0dfe6e2f3cac8.html">camera</a></li><li class="navelem"><a class="el" href="camera_8h.html">camera.h</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
 </body>
 </html>

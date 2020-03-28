@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['connection_5ftype_191',['connection_type',['../structins__camera_1_1_device_connection_info.html#a4c0923ef17907b2d6ddf9a7ebfb64105',1,'ins_camera::DeviceConnectionInfo']]]
+  ['bitrate_268',['bitrate',['../structins__camera_1_1_record_params.html#afb95dedff7fc78c0fffa7954d2998d6d',1,'ins_camera::RecordParams']]]
 ];

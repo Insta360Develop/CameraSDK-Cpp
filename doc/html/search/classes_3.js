@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['recordparams_150',['RecordParams',['../structins__camera_1_1_record_params.html',1,'ins_camera']]]
+  ['gyrodata_199',['GyroData',['../structins__camera_1_1_gyro_data.html',1,'ins_camera']]]
 ];

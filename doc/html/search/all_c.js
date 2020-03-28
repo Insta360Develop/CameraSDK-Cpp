@@ -1,17 +1,19 @@
 var searchData=
 [
-  ['serial_5fnumber_123',['serial_number',['../structins__camera_1_1_device_descriptor.html#a4c902efa2558e7d1c03f92e629e44903',1,'ins_camera::DeviceDescriptor']]],
-  ['setcapturesettings_124',['SetCaptureSettings',['../classins__camera_1_1_camera.html#ab17afc48ecc2afc1dcf4ab01577e8e48',1,'ins_camera::Camera']]],
-  ['setevbias_125',['SetEVBias',['../classins__camera_1_1_exposure_settings.html#acca5c813347a52ca7151b676648bb19c',1,'ins_camera::ExposureSettings']]],
-  ['setexposuremode_126',['SetExposureMode',['../classins__camera_1_1_exposure_settings.html#aa788e568de60eeed8988e52c01cededc',1,'ins_camera::ExposureSettings']]],
-  ['setexposuresettings_127',['SetExposureSettings',['../classins__camera_1_1_camera.html#a39a2c3f4b097594671fa365e94b4aff2',1,'ins_camera::Camera']]],
-  ['setiso_128',['SetIso',['../classins__camera_1_1_exposure_settings.html#a07f605eaf0d7448d83eee7b93e9fe246',1,'ins_camera::ExposureSettings']]],
-  ['setshutterspeed_129',['SetShutterSpeed',['../classins__camera_1_1_exposure_settings.html#ab8958ac92c2a7e4a5400d59c10d3e76a',1,'ins_camera::ExposureSettings']]],
-  ['settingstype_130',['SettingsType',['../classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db',1,'ins_camera::CaptureSettings']]],
-  ['setvalue_131',['SetValue',['../classins__camera_1_1_capture_settings.html#a7418c2e4a06532754a950a78d77f843f',1,'ins_camera::CaptureSettings']]],
-  ['setvideocaptureparams_132',['SetVideoCaptureParams',['../classins__camera_1_1_camera.html#a798f849e627c42fdfc5b78595dbe9a38',1,'ins_camera::Camera']]],
-  ['setwhitebalance_133',['SetWhiteBalance',['../classins__camera_1_1_capture_settings.html#a0a1b2f005b401385c43e08cbd660fb3f',1,'ins_camera::CaptureSettings']]],
-  ['shutterspeed_134',['ShutterSpeed',['../classins__camera_1_1_exposure_settings.html#a97f94f45e19128a423367c07d4079817',1,'ins_camera::ExposureSettings']]],
-  ['startrecording_135',['StartRecording',['../classins__camera_1_1_camera.html#a69e315f680fe4276f6f8860991dfc7ce',1,'ins_camera::Camera']]],
-  ['stoprecording_136',['StopRecording',['../classins__camera_1_1_camera.html#aea4de7b0be229a71b06b4761b63e550c',1,'ins_camera::Camera']]]
+  ['pano577_79',['Pano577',['../namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca6f366f74da5eb6757673b80d4f110181',1,'ins_camera']]],
+  ['panodefault_80',['PanoDefault',['../namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca7ef0e61a48ca08e3cb3e141d933bbfc4',1,'ins_camera']]],
+  ['photography_5fsettings_2eh_81',['photography_settings.h',['../photography__settings_8h.html',1,'']]],
+  ['photographyoptions_5fexposuremode_82',['PhotographyOptions_ExposureMode',['../namespaceins__camera.html#a358ef965c2f9aa79c2f16c4407d9ee20',1,'ins_camera']]],
+  ['photographyoptions_5fexposureoptions_5fprogram_5fauto_83',['PhotographyOptions_ExposureOptions_Program_AUTO',['../namespaceins__camera.html#a358ef965c2f9aa79c2f16c4407d9ee20adc94df4fd3363ddb898c025bd0dfb97d',1,'ins_camera']]],
+  ['photographyoptions_5fexposureoptions_5fprogram_5fiso_5fpriority_84',['PhotographyOptions_ExposureOptions_Program_ISO_PRIORITY',['../namespaceins__camera.html#a358ef965c2f9aa79c2f16c4407d9ee20ae92ceec7137fa57d64dc261fc5612bbf',1,'ins_camera']]],
+  ['photographyoptions_5fexposureoptions_5fprogram_5fmanual_85',['PhotographyOptions_ExposureOptions_Program_MANUAL',['../namespaceins__camera.html#a358ef965c2f9aa79c2f16c4407d9ee20a011f1c8cbd5c1bee4df9265956737373',1,'ins_camera']]],
+  ['photographyoptions_5fexposureoptions_5fprogram_5fshutter_5fpriority_86',['PhotographyOptions_ExposureOptions_Program_SHUTTER_PRIORITY',['../namespaceins__camera.html#a358ef965c2f9aa79c2f16c4407d9ee20af0c5fb34a30e4c7a86a40ef0d745870c',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_87',['PhotographyOptions_WhiteBalance',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_5fwb_5f2700k_88',['PhotographyOptions_WhiteBalance_WB_2700K',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4acadf0a43f81f0c081d0905a66b0bb631',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_5fwb_5f4000k_89',['PhotographyOptions_WhiteBalance_WB_4000K',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4ae1bcf279b894842b3d9373429c511cd1',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_5fwb_5f5000k_90',['PhotographyOptions_WhiteBalance_WB_5000K',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4a1e8b088ce1775d44444e794557ec932c',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_5fwb_5f6500k_91',['PhotographyOptions_WhiteBalance_WB_6500K',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4ac4f69769d7b1afd1984444010f43054c',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_5fwb_5f7500k_92',['PhotographyOptions_WhiteBalance_WB_7500K',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4a4fed9d9d2f9514dbe0bada9969e72f4c',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_5fwb_5fauto_93',['PhotographyOptions_WhiteBalance_WB_AUTO',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4a4396119ffa31ed385d66fbb754d7dfdf',1,'ins_camera']]],
+  ['photographyoptions_5fwhitebalance_5fwb_5funknown_94',['PhotographyOptions_WhiteBalance_WB_UNKNOWN',['../namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4a77333ddfdb39cf0aacc86d2909c75577',1,'ins_camera']]]
 ];

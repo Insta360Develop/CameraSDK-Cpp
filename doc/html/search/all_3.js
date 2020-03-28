@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['evbias_23',['EVBias',['../classins__camera_1_1_exposure_settings.html#a4f8501518c367a7bf3adcd3aeb5275c3',1,'ins_camera::ExposureSettings']]],
-  ['exposuremode_24',['ExposureMode',['../classins__camera_1_1_exposure_settings.html#a512a510c4d18caa659195dcbecbcd8e2',1,'ins_camera::ExposureSettings']]],
-  ['exposuresettings_25',['ExposureSettings',['../classins__camera_1_1_exposure_settings.html',1,'ins_camera::ExposureSettings'],['../classins__camera_1_1_exposure_settings.html#a9abe380f59ecc6dfb6eb42dc80f39eb9',1,'ins_camera::ExposureSettings::ExposureSettings()']]]
+  ['deletecamerafile_23',['DeleteCameraFile',['../classins__camera_1_1_camera.html#a1420e8b3c70858bb52a149cc3323630f',1,'ins_camera::Camera']]],
+  ['device_5fdiscovery_2eh_24',['device_discovery.h',['../device__discovery_8h.html',1,'']]],
+  ['deviceconnectioninfo_25',['DeviceConnectionInfo',['../structins__camera_1_1_device_connection_info.html',1,'ins_camera']]],
+  ['devicedescriptor_26',['DeviceDescriptor',['../structins__camera_1_1_device_descriptor.html',1,'ins_camera']]],
+  ['devicediscovery_27',['DeviceDiscovery',['../classins__camera_1_1_device_discovery.html',1,'ins_camera']]],
+  ['downloadcamerafile_28',['DownloadCameraFile',['../classins__camera_1_1_camera.html#a0b6b12fb302bb86ffa2ba0662f9ea6ba',1,'ins_camera::Camera']]]
 ];

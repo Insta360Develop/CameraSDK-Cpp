@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['open_173',['Open',['../classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85',1,'ins_camera::Camera']]]
+  ['lrvurls_235',['LRVUrls',['../classins__camera_1_1_media_url.html#abe1cfccbe35cf9d9efcbb1eabc25abc0',1,'ins_camera::MediaUrl']]]
 ];
