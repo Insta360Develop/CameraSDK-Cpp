@@ -5,7 +5,7 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 | Model | Link |
 | :------- | :-------- |
 | ONE X | http://insta360.com/product/insta360-onex/ |
-| ONE R Twin Edition | http://insta360.com/product/insta360-oner_twin-edition |
+| ONE R Dual-Lens Edition | http://insta360.com/product/insta360-oner_twin-edition |
 | ONE R Wide Edition | http://insta360.com/product/insta360-oner_twin-edition |
 | ONE R 1-inch Edition | http://insta360.com/product/insta360-oner_1inch-edition |
 
