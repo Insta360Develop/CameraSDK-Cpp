@@ -56,7 +56,8 @@ On camera, swipe down the screen to main menu, go to Settings->General, Set USB 
 You may install via yum or apt-get
 
 ```shell
-apt-get install libusb-dev
+sudo apt-get install libusb-dev
+sudo apt-get install libudev-dev
 ```
 
 or build from source
