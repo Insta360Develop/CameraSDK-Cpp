@@ -77,9 +77,6 @@ After installing driver, check whether the camera is detected via `lsusb` comman
 
 **On Windows**, please make sure libusbK driver is installed. You could do that by install [libusbK](https://sourceforge.net/projects/libusbk/files/libusbK-release/3.0.7.0/) directly, or using [zadig](https://zadig.akeo.ie/) to help install the libusbK driver.	
 
-## <a name="running-demo"/>Running test demo
-To be done.
-
 ## <a name="get-started" />Get Started
 ### <a name="connect" />Discover and connect to camera.
 When both of your camera and computer are prepared, you can connect your camera to your computer via USB type-c.
