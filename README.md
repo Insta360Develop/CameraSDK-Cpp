@@ -73,6 +73,12 @@ sudo make install
 
 After installing driver, check whether the camera is detected via `lsusb` command, if any USB device with vender id 0x2e1a is found, congratulations, your driver is successfully installed.
 
+**Note**: On Linux，demo program must be run by sudo, for example
+
+```
+sudo ./CameraSDKDemo //for ubuntu
+```
+
 **On Mac OSX**, nothing need to be installed.
 
 **On Windows**, please make sure libusbK driver is installed. You could do that by install [libusbK](https://sourceforge.net/projects/libusbk/files/libusbK-release/3.0.7.0/) directly, or using [zadig](https://zadig.akeo.ie/) to help install the libusbK driver.	
