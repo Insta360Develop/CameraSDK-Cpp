@@ -204,3 +204,5 @@ if (success) {
 ```
 
 For more details, please view documentations under /doc directory.
+
+Note：On windows，use Vistual Studio 2015. On ubuntu, use g++;
