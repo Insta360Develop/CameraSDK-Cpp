@@ -8,6 +8,7 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 | ONE R Dual-Lens Edition | http://insta360.com/product/insta360-oner_twin-edition |
 | ONE R Wide Edition | http://insta360.com/product/insta360-oner_twin-edition |
 | ONE R 1-inch Edition | http://insta360.com/product/insta360-oner_1inch-edition |
+| ONE X2 | https://www.insta360.com/cn/product/insta360-onex2 |
 
 ### Supported platforms
 
@@ -49,6 +50,9 @@ After upgraded, on camera, go to settings, find USB, set it to **Android** mode.
 
 On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**, Set U-Disk Mode to **Mobile** Mode.
 
+#### ONE X2
+
+On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**
 ### <a name="install-driver" />Install Driver
 
 **On Linux**, please make sure your distribution has libusb installed. 
