@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['bitrate_5',['bitrate',['../structins__camera_1_1_record_params.html#afb95dedff7fc78c0fffa7954d2998d6d',1,'ins_camera::RecordParams']]],
-  ['bluetooth_6',['Bluetooth',['../namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfca7deff39593c9cecd401b795d6e1ae04b',1,'ins_camera']]]
+  ['camera_1',['Camera',['../classins__camera_1_1_camera.html',1,'ins_camera::Camera'],['../classins__camera_1_1_camera.html#a29304af63f385c6b73230fc4f73d7512',1,'ins_camera::Camera::Camera()']]],
+  ['capturesettings_2',['CaptureSettings',['../classins__camera_1_1_capture_settings.html',1,'ins_camera']]],
+  ['close_3',['Close',['../classins__camera_1_1_camera.html#a0da6598a2971559e0d84e4bf2a6705c4',1,'ins_camera::Camera']]]
 ];

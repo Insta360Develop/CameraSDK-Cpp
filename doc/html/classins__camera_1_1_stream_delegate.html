@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceins__camera.html">ins_camera</a></li><li class="navelem"><a class="el" href="classins__camera_1_1_stream_delegate.html">StreamDelegate</a></li>  </ul>
+<li class="navelem"><b>ins_camera</b></li><li class="navelem"><a class="el" href="classins__camera_1_1_stream_delegate.html">StreamDelegate</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,165 +72,24 @@ $(function() {
 <div class="title">ins_camera::StreamDelegate Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="stream__delegate_8h_source.html">stream_delegate.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6811e730b735788deb83123fa3be880a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_stream_delegate.html#a6811e730b735788deb83123fa3be880a">OnAudioData</a> (const uint8_t *data, size_t size, int64_t timestamp)=0</td></tr>
+<tr class="memitem:a6811e730b735788deb83123fa3be880a"><td class="memItemLeft" align="right" valign="top"><a id="a6811e730b735788deb83123fa3be880a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAudioData</b> (const uint8_t *data, size_t size, int64_t timestamp)=0</td></tr>
 <tr class="separator:a6811e730b735788deb83123fa3be880a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bde50842379790769fda32e9d5d5cc0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_stream_delegate.html#a0bde50842379790769fda32e9d5d5cc0">OnVideoData</a> (const uint8_t *data, size_t size, int64_t timestamp, int stream_index=0)=0</td></tr>
-<tr class="separator:a0bde50842379790769fda32e9d5d5cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bd70b32a13de1c33c580dc16453a289"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_stream_delegate.html#a6bd70b32a13de1c33c580dc16453a289">OnGyroData</a> (const std::vector&lt; <a class="el" href="structins__camera_1_1_gyro_data.html">GyroData</a> &gt; &amp;data)=0</td></tr>
+<tr class="memitem:a92f006a21e242ad7a274cf973ff568f0"><td class="memItemLeft" align="right" valign="top"><a id="a92f006a21e242ad7a274cf973ff568f0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnVideoData</b> (const uint8_t *data, size_t size, int64_t timestamp, uint8_t streamType, int stream_index=0)=0</td></tr>
+<tr class="separator:a92f006a21e242ad7a274cf973ff568f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bd70b32a13de1c33c580dc16453a289"><td class="memItemLeft" align="right" valign="top"><a id="a6bd70b32a13de1c33c580dc16453a289"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnGyroData</b> (const std::vector&lt; <a class="el" href="structins__camera_1_1_gyro_data.html">GyroData</a> &gt; &amp;data)=0</td></tr>
 <tr class="separator:a6bd70b32a13de1c33c580dc16453a289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4fedf85a24ae9ac6ee9357c5503b3c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_stream_delegate.html#ac4fedf85a24ae9ac6ee9357c5503b3c5">OnExposureData</a> (const <a class="el" href="structins__camera_1_1_exposure_data.html">ExposureData</a> &amp;data)=0</td></tr>
+<tr class="memitem:ac4fedf85a24ae9ac6ee9357c5503b3c5"><td class="memItemLeft" align="right" valign="top"><a id="ac4fedf85a24ae9ac6ee9357c5503b3c5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnExposureData</b> (const <a class="el" href="structins__camera_1_1_exposure_data.html">ExposureData</a> &amp;data)=0</td></tr>
 <tr class="separator:ac4fedf85a24ae9ac6ee9357c5503b3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6811e730b735788deb83123fa3be880a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6811e730b735788deb83123fa3be880a">&#9670;&nbsp;</a></span>OnAudioData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ins_camera::StreamDelegate::OnAudioData </td>
-          <td>(</td>
-          <td class="paramtype">const uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>timestamp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac4fedf85a24ae9ac6ee9357c5503b3c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4fedf85a24ae9ac6ee9357c5503b3c5">&#9670;&nbsp;</a></span>OnExposureData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ins_camera::StreamDelegate::OnExposureData </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structins__camera_1_1_exposure_data.html">ExposureData</a> &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6bd70b32a13de1c33c580dc16453a289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bd70b32a13de1c33c580dc16453a289">&#9670;&nbsp;</a></span>OnGyroData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ins_camera::StreamDelegate::OnGyroData </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="structins__camera_1_1_gyro_data.html">GyroData</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0bde50842379790769fda32e9d5d5cc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bde50842379790769fda32e9d5d5cc0">&#9670;&nbsp;</a></span>OnVideoData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ins_camera::StreamDelegate::OnVideoData </td>
-          <td>(</td>
-          <td class="paramtype">const uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>timestamp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>stream_index</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>stream/<a class="el" href="stream__delegate_8h_source.html">stream_delegate.h</a></li>
+<li>D:/workspace/CameraSDK/include/stream/<a class="el" href="stream__delegate_8h_source.html">stream_delegate.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -12,35 +12,41 @@ a class wrapping capture settings. \mbox{\hyperlink{classins__camera_1_1_capture
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}} \{ \newline
-\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dbacbcdf65dc8a0c6d9a241c200e5a44385}{Capture\+Settings\+\_\+\+Contrast}}, 
-\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba757a3dafa4fde977e3aeaa761b66fbe0}{Capture\+Settings\+\_\+\+Saturation}}, 
-\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba7389bc7e4c4af71d3549dba82d383ccc}{Capture\+Settings\+\_\+\+Brightness}}, 
-\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba7f9ff6a381ed50e581f1d2c16550f5be}{Capture\+Settings\+\_\+\+Sharpness}}, 
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}\label{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}} 
+enum {\bfseries Settings\+Type} \{ \newline
+{\bfseries Capture\+Settings\+\_\+\+Contrast} = 0, 
+{\bfseries Capture\+Settings\+\_\+\+Saturation}, 
+{\bfseries Capture\+Settings\+\_\+\+Brightness}, 
+{\bfseries Capture\+Settings\+\_\+\+Sharpness}, 
 \newline
-\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dbaf561b4e472a69aabd80c26ce54142f95}{Capture\+Settings\+\_\+\+White\+Balance}}
+{\bfseries Capture\+Settings\+\_\+\+White\+Balance}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classins__camera_1_1_capture_settings_adeda99842f48f8d914c58ed8852dae4b}{Capture\+Settings}} ()=default
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a521550dc407d67445d55981892da6626}\label{classins__camera_1_1_capture_settings_a521550dc407d67445d55981892da6626}} 
+{\bfseries Capture\+Settings} (const \mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}} \&other)
 \item 
-\mbox{\hyperlink{classins__camera_1_1_capture_settings_a521550dc407d67445d55981892da6626}{Capture\+Settings}} (const \mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}} \&other)
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}} $>$ \mbox{\hyperlink{classins__camera_1_1_capture_settings_af9d0f8729729397f1ccbf3e9c695c7ba}{Get\+Setting\+Types}} () const
+std\+::vector$<$ Settings\+Type $>$ \mbox{\hyperlink{classins__camera_1_1_capture_settings_af9d0f8729729397f1ccbf3e9c695c7ba}{Get\+Setting\+Types}} () const
 \begin{DoxyCompactList}\small\item\em get a list of settings types you have set. Any settings not included in this list will not be applied to the camera. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classins__camera_1_1_capture_settings_ae169c6442a59b362879ebe5c7d9ea47f}{Update\+Setting\+Types}} (std\+::vector$<$ \mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}} $>$ \&types)
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_ae169c6442a59b362879ebe5c7d9ea47f}\label{classins__camera_1_1_capture_settings_ae169c6442a59b362879ebe5c7d9ea47f}} 
+void \mbox{\hyperlink{classins__camera_1_1_capture_settings_ae169c6442a59b362879ebe5c7d9ea47f}{Update\+Setting\+Types}} (std\+::vector$<$ Settings\+Type $>$ \&types)
 \begin{DoxyCompactList}\small\item\em set setting types to be applied mannually. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a616bbf04ef75dfbcda06510ccfb6cad1}\label{classins__camera_1_1_capture_settings_a616bbf04ef75dfbcda06510ccfb6cad1}} 
 void \mbox{\hyperlink{classins__camera_1_1_capture_settings_a616bbf04ef75dfbcda06510ccfb6cad1}{Reset\+Setting\+Types}} ()
 \begin{DoxyCompactList}\small\item\em reset setting types, any types recorded when you call Set\+X\+X\+X() previously will not be applied until you call Set\+X\+XX next time. however, the value already be applied will be kept \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classins__camera_1_1_capture_settings_a7418c2e4a06532754a950a78d77f843f}{Set\+Value}} (\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}} type, int32\+\_\+t value, bool apply\+\_\+to\+\_\+camera=true)
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a7418c2e4a06532754a950a78d77f843f}\label{classins__camera_1_1_capture_settings_a7418c2e4a06532754a950a78d77f843f}} 
+void {\bfseries Set\+Value} (Settings\+Type type, int32\+\_\+t value, bool apply\+\_\+to\+\_\+camera=true)
 \item 
-void \mbox{\hyperlink{classins__camera_1_1_capture_settings_a0a1b2f005b401385c43e08cbd660fb3f}{Set\+White\+Balance}} (\mbox{\hyperlink{namespaceins__camera_a8b19dcdbe229a389cf743d4e5e9808f4}{Photography\+Options\+\_\+\+White\+Balance}} wb, bool apply\+\_\+to\+\_\+camera=true)
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0a1b2f005b401385c43e08cbd660fb3f}\label{classins__camera_1_1_capture_settings_a0a1b2f005b401385c43e08cbd660fb3f}} 
+void {\bfseries Set\+White\+Balance} (Photography\+Options\+\_\+\+White\+Balance wb, bool apply\+\_\+to\+\_\+camera=true)
 \item 
-int32\+\_\+t \mbox{\hyperlink{classins__camera_1_1_capture_settings_a408c461067f5d03bcfb29127d658fc40}{Get\+Int\+Value}} (\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}} type) const
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a408c461067f5d03bcfb29127d658fc40}\label{classins__camera_1_1_capture_settings_a408c461067f5d03bcfb29127d658fc40}} 
+int32\+\_\+t {\bfseries Get\+Int\+Value} (Settings\+Type type) const
 \item 
-\mbox{\hyperlink{namespaceins__camera_a8b19dcdbe229a389cf743d4e5e9808f4}{Photography\+Options\+\_\+\+White\+Balance}} \mbox{\hyperlink{classins__camera_1_1_capture_settings_a369e3f1d63c8416376f36199375e825b}{White\+Balance}} ()
+\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a369e3f1d63c8416376f36199375e825b}\label{classins__camera_1_1_capture_settings_a369e3f1d63c8416376f36199375e825b}} 
+Photography\+Options\+\_\+\+White\+Balance {\bfseries White\+Balance} ()
 \end{DoxyCompactItemize}
 
 
@@ -53,68 +59,16 @@ a class wrapping capture settings. \mbox{\hyperlink{classins__camera_1_1_capture
 \item Contrast\+: 0$\sim$256, default 64
 \item Saturation\+:0$\sim$256, default 64
 \item Brightness\+:-\/256$\sim$256, default 0
-\item White\+Balance\+: see \mbox{\hyperlink{namespaceins__camera_a8b19dcdbe229a389cf743d4e5e9808f4}{Photography\+Options\+\_\+\+White\+Balance}}
+\item White\+Balance\+: see \#\+Photography\+Options\+\_\+\+White\+Balance
 \item Sharpness\+: 0$\sim$6, default 3 
 \end{DoxyItemize}
 
-\doxysubsection{Member Enumeration Documentation}
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}\label{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!SettingsType@{SettingsType}}
-\index{SettingsType@{SettingsType}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{SettingsType}{SettingsType}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{ins\+\_\+camera\+::\+Capture\+Settings\+::\+Settings\+Type}}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CaptureSettings\_Contrast@{CaptureSettings\_Contrast}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!CaptureSettings\_Contrast@{CaptureSettings\_Contrast}}}\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dbacbcdf65dc8a0c6d9a241c200e5a44385}\label{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dbacbcdf65dc8a0c6d9a241c200e5a44385}} 
-Capture\+Settings\+\_\+\+Contrast&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CaptureSettings\_Saturation@{CaptureSettings\_Saturation}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!CaptureSettings\_Saturation@{CaptureSettings\_Saturation}}}\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba757a3dafa4fde977e3aeaa761b66fbe0}\label{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba757a3dafa4fde977e3aeaa761b66fbe0}} 
-Capture\+Settings\+\_\+\+Saturation&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CaptureSettings\_Brightness@{CaptureSettings\_Brightness}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!CaptureSettings\_Brightness@{CaptureSettings\_Brightness}}}\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba7389bc7e4c4af71d3549dba82d383ccc}\label{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba7389bc7e4c4af71d3549dba82d383ccc}} 
-Capture\+Settings\+\_\+\+Brightness&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CaptureSettings\_Sharpness@{CaptureSettings\_Sharpness}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!CaptureSettings\_Sharpness@{CaptureSettings\_Sharpness}}}\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba7f9ff6a381ed50e581f1d2c16550f5be}\label{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dba7f9ff6a381ed50e581f1d2c16550f5be}} 
-Capture\+Settings\+\_\+\+Sharpness&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CaptureSettings\_WhiteBalance@{CaptureSettings\_WhiteBalance}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!CaptureSettings\_WhiteBalance@{CaptureSettings\_WhiteBalance}}}\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dbaf561b4e472a69aabd80c26ce54142f95}\label{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0dbaf561b4e472a69aabd80c26ce54142f95}} 
-Capture\+Settings\+\_\+\+White\+Balance&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_adeda99842f48f8d914c58ed8852dae4b}\label{classins__camera_1_1_capture_settings_adeda99842f48f8d914c58ed8852dae4b}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!CaptureSettings@{CaptureSettings}}
-\index{CaptureSettings@{CaptureSettings}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{CaptureSettings()}{CaptureSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily ins\+\_\+camera\+::\+Capture\+Settings\+::\+Capture\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a521550dc407d67445d55981892da6626}\label{classins__camera_1_1_capture_settings_a521550dc407d67445d55981892da6626}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!CaptureSettings@{CaptureSettings}}
-\index{CaptureSettings@{CaptureSettings}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{CaptureSettings()}{CaptureSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily ins\+\_\+camera\+::\+Capture\+Settings\+::\+Capture\+Settings (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classins__camera_1_1_capture_settings}{Capture\+Settings}} \&}]{other }\end{DoxyParamCaption})}
-
-
-
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a408c461067f5d03bcfb29127d658fc40}\label{classins__camera_1_1_capture_settings_a408c461067f5d03bcfb29127d658fc40}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!GetIntValue@{GetIntValue}}
-\index{GetIntValue@{GetIntValue}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{GetIntValue()}{GetIntValue()}}
-{\footnotesize\ttfamily int32\+\_\+t ins\+\_\+camera\+::\+Capture\+Settings\+::\+Get\+Int\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}}}]{type }\end{DoxyParamCaption}) const}
-
 \mbox{\Hypertarget{classins__camera_1_1_capture_settings_af9d0f8729729397f1ccbf3e9c695c7ba}\label{classins__camera_1_1_capture_settings_af9d0f8729729397f1ccbf3e9c695c7ba}} 
 \index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!GetSettingTypes@{GetSettingTypes}}
 \index{GetSettingTypes@{GetSettingTypes}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
 \doxysubsubsection{\texorpdfstring{GetSettingTypes()}{GetSettingTypes()}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}}$>$ ins\+\_\+camera\+::\+Capture\+Settings\+::\+Get\+Setting\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::vector$<$Settings\+Type$>$ ins\+\_\+camera\+::\+Capture\+Settings\+::\+Get\+Setting\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -123,46 +77,8 @@ get a list of settings types you have set. Any settings not included in this lis
 \begin{DoxyReturn}{Returns}
 a list of Settings\+Type that will be applied 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a616bbf04ef75dfbcda06510ccfb6cad1}\label{classins__camera_1_1_capture_settings_a616bbf04ef75dfbcda06510ccfb6cad1}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!ResetSettingTypes@{ResetSettingTypes}}
-\index{ResetSettingTypes@{ResetSettingTypes}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{ResetSettingTypes()}{ResetSettingTypes()}}
-{\footnotesize\ttfamily void ins\+\_\+camera\+::\+Capture\+Settings\+::\+Reset\+Setting\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-reset setting types, any types recorded when you call Set\+X\+X\+X() previously will not be applied until you call Set\+X\+XX next time. however, the value already be applied will be kept 
-
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a7418c2e4a06532754a950a78d77f843f}\label{classins__camera_1_1_capture_settings_a7418c2e4a06532754a950a78d77f843f}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!SetValue@{SetValue}}
-\index{SetValue@{SetValue}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
-{\footnotesize\ttfamily void ins\+\_\+camera\+::\+Capture\+Settings\+::\+Set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}}}]{type,  }\item[{int32\+\_\+t}]{value,  }\item[{bool}]{apply\+\_\+to\+\_\+camera = {\ttfamily true} }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a0a1b2f005b401385c43e08cbd660fb3f}\label{classins__camera_1_1_capture_settings_a0a1b2f005b401385c43e08cbd660fb3f}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!SetWhiteBalance@{SetWhiteBalance}}
-\index{SetWhiteBalance@{SetWhiteBalance}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{SetWhiteBalance()}{SetWhiteBalance()}}
-{\footnotesize\ttfamily void ins\+\_\+camera\+::\+Capture\+Settings\+::\+Set\+White\+Balance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceins__camera_a8b19dcdbe229a389cf743d4e5e9808f4}{Photography\+Options\+\_\+\+White\+Balance}}}]{wb,  }\item[{bool}]{apply\+\_\+to\+\_\+camera = {\ttfamily true} }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_ae169c6442a59b362879ebe5c7d9ea47f}\label{classins__camera_1_1_capture_settings_ae169c6442a59b362879ebe5c7d9ea47f}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!UpdateSettingTypes@{UpdateSettingTypes}}
-\index{UpdateSettingTypes@{UpdateSettingTypes}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{UpdateSettingTypes()}{UpdateSettingTypes()}}
-{\footnotesize\ttfamily void ins\+\_\+camera\+::\+Capture\+Settings\+::\+Update\+Setting\+Types (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classins__camera_1_1_capture_settings_a0fc8d0a64742d19c20cea32b4637c0db}{Settings\+Type}} $>$ \&}]{types }\end{DoxyParamCaption})}
-
-
-
-set setting types to be applied mannually. 
-
-\mbox{\Hypertarget{classins__camera_1_1_capture_settings_a369e3f1d63c8416376f36199375e825b}\label{classins__camera_1_1_capture_settings_a369e3f1d63c8416376f36199375e825b}} 
-\index{ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}!WhiteBalance@{WhiteBalance}}
-\index{WhiteBalance@{WhiteBalance}!ins\_camera::CaptureSettings@{ins\_camera::CaptureSettings}}
-\doxysubsubsection{\texorpdfstring{WhiteBalance()}{WhiteBalance()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceins__camera_a8b19dcdbe229a389cf743d4e5e9808f4}{Photography\+Options\+\_\+\+White\+Balance}} ins\+\_\+camera\+::\+Capture\+Settings\+::\+White\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/camera/\mbox{\hyperlink{photography__settings_8h}{photography\+\_\+settings.\+h}}\end{DoxyCompactItemize}
+D\+:/workspace/\+Camera\+S\+D\+K/include/camera/photography\+\_\+settings.\+h\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['recordparams_202',['RecordParams',['../structins__camera_1_1_record_params.html',1,'ins_camera']]]
+  ['mediaurl_63',['MediaUrl',['../classins__camera_1_1_media_url.html',1,'ins_camera']]]
 ];

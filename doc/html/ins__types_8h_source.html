@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CameraSDK: camera/ins_types.h Source File</title>
+<title>CameraSDK: D:/workspace/CameraSDK/include/camera/ins_types.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8d9433177dc817784c962bbda0fc1c03.html">camera</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5fd01ce315030278c414d4726873c6c8.html">CameraSDK</a></li><li class="navelem"><a class="el" href="dir_574e4509ab9b7f88de388f6eae82195e.html">include</a></li><li class="navelem"><a class="el" href="dir_43420ddc8bc1a691f52b831dca405c8f.html">camera</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,93 +69,103 @@ $(function() {
 <div class="title">ins_types.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="ins__types_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="ins__types_8h.html#a5ad45bc9a71efdbcc1b71db2a3f68139">    5</a></span>&#160;<span class="preprocessor">#define CAMERASDK_API</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#if WIN32</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">    #ifdef USE_EXPORTDLL</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">        #define CAMERASDK_API _declspec(dllexport)</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">    #else</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">        #define CAMERASDK_API _declspec(dllimport)</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceins__camera.html">ins_camera</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9d">   15</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9d">CameraType</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9da88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9da3b29f16051c1a20ff0b5cab146808d8c">Insta360OneX</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9da090af878e78756fa0bbcff2f734c1a75">Insta360OneR</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0c">   21</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0c">CameraLensType</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca7ef0e61a48ca08e3cb3e141d933bbfc4">PanoDefault</a>,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca8ef17d75932a2b077c450a5e2957b39d">Wide577</a>,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca6f366f74da5eb6757673b80d4f110181">Pano577</a>,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca720474cf34147083a864e5229599e83c">WIDE283</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfc">   28</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfc">ConnectionType</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfca7aca5ec618f7317328dcd7014cf9bdcf">USB</a>,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfcadbbd91fb2aed7056f4aeac45a5452357">Wifi</a>,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfca7deff39593c9cecd401b795d6e1ae04b">Bluetooth</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_connection_info.html">   34</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structins__camera_1_1_device_connection_info.html">DeviceConnectionInfo</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_connection_info.html#a4c0923ef17907b2d6ddf9a7ebfb64105">   35</a></span>&#160;    <a class="code" href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfc">ConnectionType</a> <a class="code" href="structins__camera_1_1_device_connection_info.html#a4c0923ef17907b2d6ddf9a7ebfb64105">connection_type</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_connection_info.html#aa45ce491086e3a2272a422548da142ce">   36</a></span>&#160;    <span class="keywordtype">void</span>* <a class="code" href="structins__camera_1_1_device_connection_info.html#aa45ce491086e3a2272a422548da142ce">native_connection_info</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_descriptor.html">   40</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structins__camera_1_1_device_descriptor.html">DeviceDescriptor</a> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_descriptor.html#ae2bfe5a29aff9eacbc18b8377ddf78c6">   41</a></span>&#160;    <a class="code" href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9d">CameraType</a> <a class="code" href="structins__camera_1_1_device_descriptor.html#ae2bfe5a29aff9eacbc18b8377ddf78c6">camera_type</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_descriptor.html#ae88f3c78907c6f21c6cb591a01a5f6d8">   42</a></span>&#160;    <a class="code" href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0c">CameraLensType</a> <a class="code" href="structins__camera_1_1_device_descriptor.html#ae88f3c78907c6f21c6cb591a01a5f6d8">lens_type</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_descriptor.html#a4c902efa2558e7d1c03f92e629e44903">   43</a></span>&#160;    std::string <a class="code" href="structins__camera_1_1_device_descriptor.html#a4c902efa2558e7d1c03f92e629e44903">serial_number</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_descriptor.html#ae8e320df10a4e8d37b2328799b45d9ba">   44</a></span>&#160;    <a class="code" href="structins__camera_1_1_device_connection_info.html">DeviceConnectionInfo</a> <a class="code" href="structins__camera_1_1_device_descriptor.html#ae8e320df10a4e8d37b2328799b45d9ba">info</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#if WIN32</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">    #ifdef USE_EXPORTDLL</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">        #define CAMERASDK_API _declspec(dllexport)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">    #else</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">        #define CAMERASDK_API _declspec(dllimport)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#else </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">    #define CAMERASDK_API</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>ins_camera {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">enum class</span> CameraType {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Unknown,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Insta360OneX,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Insta360OneR,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Insta360OneRS,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Insta360OneX2,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Insta360X3</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">enum class</span> CameraLensType {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    PanoDefault,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Wide577,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Pano577,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Wide283,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Pano283,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Wide586,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Pano586,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Action577,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">enum class</span> ConnectionType {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    USB,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    Wifi,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    Bluetooth</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">enum class</span> VideoEncodeType {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    H264,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    H265</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classins__camera_1_1_media_url.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="ins__types_8h.html#a5ad45bc9a71efdbcc1b71db2a3f68139">CAMERASDK_API</a> <a class="code" href="classins__camera_1_1_media_url.html">MediaUrl</a> {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classins__camera_1_1_media_url.html">MediaUrl</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; uris,<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; lrv_uris = std::vector&lt;std::string&gt;());</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> Empty() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> IsSingleOrigin() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> IsSingleLRV() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string GetSingleOrigin() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::string GetSingleLRV() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; OriginUrls() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; LRVUrls() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::vector&lt;std::string&gt; uris_;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::vector&lt;std::string&gt; lrv_uris_;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_connection_info.html">   47</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structins__camera_1_1_device_connection_info.html">DeviceConnectionInfo</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ConnectionType connection_type;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span>* native_connection_info;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structins__camera_1_1_device_descriptor.html">   53</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structins__camera_1_1_device_descriptor.html">DeviceDescriptor</a> {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    CameraType camera_type;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    CameraLensType lens_type;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::string serial_number;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structins__camera_1_1_device_connection_info.html">DeviceConnectionInfo</a> info;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">enum</span> CardState {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    STOR_CS_PASS = 0,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    STOR_CS_NOCARD = 1,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    STOR_CS_NOSPACE = 2,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    STOR_CS_INVALID_FORMAT = 3,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    STOR_CS_WPCARD = 4,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    STOR_CS_OTHER_ERROR = 5</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structins__camera_1_1_storage_status.html">   71</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structins__camera_1_1_storage_status.html">StorageStatus</a> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    CardState state;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    uint64_t free_space;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    uint64_t total_space;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classins__camera_1_1_media_url.html">   77</a></span>&#160;<span class="keyword">class </span>CAMERASDK_API <a class="code" href="classins__camera_1_1_media_url.html">MediaUrl</a> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classins__camera_1_1_media_url.html">MediaUrl</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; uris,<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; lrv_uris = std::vector&lt;std::string&gt;());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> Empty() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> IsSingleOrigin() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> IsSingleLRV() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string GetSingleOrigin() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::string GetSingleLRV() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; OriginUrls() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; LRVUrls() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::vector&lt;std::string&gt; uris_;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::vector&lt;std::string&gt; lrv_uris_;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructins__camera_1_1_device_descriptor_html"><div class="ttname"><a href="structins__camera_1_1_device_descriptor.html">ins_camera::DeviceDescriptor</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:40</div></div>
-<div class="ttc" id="anamespaceins__camera_html"><div class="ttname"><a href="namespaceins__camera.html">ins_camera</a></div><div class="ttdef"><b>Definition:</b> camera.h:9</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a3ac2b899f038ed09bf40ebcfcc8cfc0ca720474cf34147083a864e5229599e83c"><div class="ttname"><a href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca720474cf34147083a864e5229599e83c">ins_camera::CameraLensType::WIDE283</a></div><div class="ttdeci">@ WIDE283</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_descriptor_html_ae8e320df10a4e8d37b2328799b45d9ba"><div class="ttname"><a href="structins__camera_1_1_device_descriptor.html#ae8e320df10a4e8d37b2328799b45d9ba">ins_camera::DeviceDescriptor::info</a></div><div class="ttdeci">DeviceConnectionInfo info</div><div class="ttdef"><b>Definition:</b> ins_types.h:44</div></div>
-<div class="ttc" id="ains__types_8h_html_a5ad45bc9a71efdbcc1b71db2a3f68139"><div class="ttname"><a href="ins__types_8h.html#a5ad45bc9a71efdbcc1b71db2a3f68139">CAMERASDK_API</a></div><div class="ttdeci">#define CAMERASDK_API</div><div class="ttdef"><b>Definition:</b> ins_types.h:5</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a3ac2b899f038ed09bf40ebcfcc8cfc0ca6f366f74da5eb6757673b80d4f110181"><div class="ttname"><a href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca6f366f74da5eb6757673b80d4f110181">ins_camera::CameraLensType::Pano577</a></div><div class="ttdeci">@ Pano577</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_connection_info_html_a4c0923ef17907b2d6ddf9a7ebfb64105"><div class="ttname"><a href="structins__camera_1_1_device_connection_info.html#a4c0923ef17907b2d6ddf9a7ebfb64105">ins_camera::DeviceConnectionInfo::connection_type</a></div><div class="ttdeci">ConnectionType connection_type</div><div class="ttdef"><b>Definition:</b> ins_types.h:35</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_connection_info_html"><div class="ttname"><a href="structins__camera_1_1_device_connection_info.html">ins_camera::DeviceConnectionInfo</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:34</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a2eaa32d21bb1fdc2c21518f78f33bbfca7deff39593c9cecd401b795d6e1ae04b"><div class="ttname"><a href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfca7deff39593c9cecd401b795d6e1ae04b">ins_camera::ConnectionType::Bluetooth</a></div><div class="ttdeci">@ Bluetooth</div></div>
-<div class="ttc" id="anamespaceins__camera_html_aa595c7ba3ea7d4fd2be58cec23ed7a9da090af878e78756fa0bbcff2f734c1a75"><div class="ttname"><a href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9da090af878e78756fa0bbcff2f734c1a75">ins_camera::CameraType::Insta360OneR</a></div><div class="ttdeci">@ Insta360OneR</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a2eaa32d21bb1fdc2c21518f78f33bbfcadbbd91fb2aed7056f4aeac45a5452357"><div class="ttname"><a href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfcadbbd91fb2aed7056f4aeac45a5452357">ins_camera::ConnectionType::Wifi</a></div><div class="ttdeci">@ Wifi</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_descriptor_html_a4c902efa2558e7d1c03f92e629e44903"><div class="ttname"><a href="structins__camera_1_1_device_descriptor.html#a4c902efa2558e7d1c03f92e629e44903">ins_camera::DeviceDescriptor::serial_number</a></div><div class="ttdeci">std::string serial_number</div><div class="ttdef"><b>Definition:</b> ins_types.h:43</div></div>
-<div class="ttc" id="anamespaceins__camera_html_aa595c7ba3ea7d4fd2be58cec23ed7a9d"><div class="ttname"><a href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9d">ins_camera::CameraType</a></div><div class="ttdeci">CameraType</div><div class="ttdef"><b>Definition:</b> ins_types.h:15</div></div>
-<div class="ttc" id="aclassins__camera_1_1_media_url_html"><div class="ttname"><a href="classins__camera_1_1_media_url.html">ins_camera::MediaUrl</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:47</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a2eaa32d21bb1fdc2c21518f78f33bbfca7aca5ec618f7317328dcd7014cf9bdcf"><div class="ttname"><a href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfca7aca5ec618f7317328dcd7014cf9bdcf">ins_camera::ConnectionType::USB</a></div><div class="ttdeci">@ USB</div></div>
-<div class="ttc" id="anamespaceins__camera_html_aa595c7ba3ea7d4fd2be58cec23ed7a9da3b29f16051c1a20ff0b5cab146808d8c"><div class="ttname"><a href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9da3b29f16051c1a20ff0b5cab146808d8c">ins_camera::CameraType::Insta360OneX</a></div><div class="ttdeci">@ Insta360OneX</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_descriptor_html_ae2bfe5a29aff9eacbc18b8377ddf78c6"><div class="ttname"><a href="structins__camera_1_1_device_descriptor.html#ae2bfe5a29aff9eacbc18b8377ddf78c6">ins_camera::DeviceDescriptor::camera_type</a></div><div class="ttdeci">CameraType camera_type</div><div class="ttdef"><b>Definition:</b> ins_types.h:41</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_descriptor_html_ae88f3c78907c6f21c6cb591a01a5f6d8"><div class="ttname"><a href="structins__camera_1_1_device_descriptor.html#ae88f3c78907c6f21c6cb591a01a5f6d8">ins_camera::DeviceDescriptor::lens_type</a></div><div class="ttdeci">CameraLensType lens_type</div><div class="ttdef"><b>Definition:</b> ins_types.h:42</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a3ac2b899f038ed09bf40ebcfcc8cfc0ca8ef17d75932a2b077c450a5e2957b39d"><div class="ttname"><a href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca8ef17d75932a2b077c450a5e2957b39d">ins_camera::CameraLensType::Wide577</a></div><div class="ttdeci">@ Wide577</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a3ac2b899f038ed09bf40ebcfcc8cfc0ca7ef0e61a48ca08e3cb3e141d933bbfc4"><div class="ttname"><a href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0ca7ef0e61a48ca08e3cb3e141d933bbfc4">ins_camera::CameraLensType::PanoDefault</a></div><div class="ttdeci">@ PanoDefault</div></div>
-<div class="ttc" id="astructins__camera_1_1_device_connection_info_html_aa45ce491086e3a2272a422548da142ce"><div class="ttname"><a href="structins__camera_1_1_device_connection_info.html#aa45ce491086e3a2272a422548da142ce">ins_camera::DeviceConnectionInfo::native_connection_info</a></div><div class="ttdeci">void * native_connection_info</div><div class="ttdef"><b>Definition:</b> ins_types.h:36</div></div>
-<div class="ttc" id="anamespaceins__camera_html_aa595c7ba3ea7d4fd2be58cec23ed7a9da88183b946cc5f0e8c96b2e66e1c74a7e"><div class="ttname"><a href="namespaceins__camera.html#aa595c7ba3ea7d4fd2be58cec23ed7a9da88183b946cc5f0e8c96b2e66e1c74a7e">ins_camera::CameraType::Unknown</a></div><div class="ttdeci">@ Unknown</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a3ac2b899f038ed09bf40ebcfcc8cfc0c"><div class="ttname"><a href="namespaceins__camera.html#a3ac2b899f038ed09bf40ebcfcc8cfc0c">ins_camera::CameraLensType</a></div><div class="ttdeci">CameraLensType</div><div class="ttdef"><b>Definition:</b> ins_types.h:21</div></div>
-<div class="ttc" id="anamespaceins__camera_html_a2eaa32d21bb1fdc2c21518f78f33bbfc"><div class="ttname"><a href="namespaceins__camera.html#a2eaa32d21bb1fdc2c21518f78f33bbfc">ins_camera::ConnectionType</a></div><div class="ttdeci">ConnectionType</div><div class="ttdef"><b>Definition:</b> ins_types.h:28</div></div>
+<div class="ttc" id="astructins__camera_1_1_device_descriptor_html"><div class="ttname"><a href="structins__camera_1_1_device_descriptor.html">ins_camera::DeviceDescriptor</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:53</div></div>
+<div class="ttc" id="astructins__camera_1_1_device_connection_info_html"><div class="ttname"><a href="structins__camera_1_1_device_connection_info.html">ins_camera::DeviceConnectionInfo</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:47</div></div>
+<div class="ttc" id="astructins__camera_1_1_storage_status_html"><div class="ttname"><a href="structins__camera_1_1_storage_status.html">ins_camera::StorageStatus</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:71</div></div>
+<div class="ttc" id="aclassins__camera_1_1_media_url_html"><div class="ttname"><a href="classins__camera_1_1_media_url.html">ins_camera::MediaUrl</a></div><div class="ttdef"><b>Definition:</b> ins_types.h:77</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

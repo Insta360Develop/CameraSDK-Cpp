@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resetsettingtypes_244',['ResetSettingTypes',['../classins__camera_1_1_capture_settings.html#a616bbf04ef75dfbcda06510ccfb6cad1',1,'ins_camera::CaptureSettings']]]
+  ['updatesettingtypes_104',['UpdateSettingTypes',['../classins__camera_1_1_capture_settings.html#ae169c6442a59b362879ebe5c7d9ea47f',1,'ins_camera::CaptureSettings']]]
 ];

@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceins__camera.html">ins_camera</a></li><li class="navelem"><a class="el" href="classins__camera_1_1_capture_settings.html">CaptureSettings</a></li>  </ul>
+<li class="navelem"><b>ins_camera</b></li><li class="navelem"><a class="el" href="classins__camera_1_1_capture_settings.html">CaptureSettings</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,39 +81,44 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0fc8d0a64742d19c20cea32b4637c0db"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a> { <br />
-&#160;&#160;<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0dbacbcdf65dc8a0c6d9a241c200e5a44385">CaptureSettings_Contrast</a> = 0, 
-<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0dba757a3dafa4fde977e3aeaa761b66fbe0">CaptureSettings_Saturation</a>, 
-<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0dba7389bc7e4c4af71d3549dba82d383ccc">CaptureSettings_Brightness</a>, 
-<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0dba7f9ff6a381ed50e581f1d2c16550f5be">CaptureSettings_Sharpness</a>, 
+<tr class="memitem:a0fc8d0a64742d19c20cea32b4637c0db"><td class="memItemLeft" align="right" valign="top"><a id="a0fc8d0a64742d19c20cea32b4637c0db"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>SettingsType</b> { <br />
+&#160;&#160;<b>CaptureSettings_Contrast</b> = 0, 
+<b>CaptureSettings_Saturation</b>, 
+<b>CaptureSettings_Brightness</b>, 
+<b>CaptureSettings_Sharpness</b>, 
 <br />
-&#160;&#160;<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0dbaf561b4e472a69aabd80c26ce54142f95">CaptureSettings_WhiteBalance</a>
+&#160;&#160;<b>CaptureSettings_WhiteBalance</b>
 <br />
  }</td></tr>
 <tr class="separator:a0fc8d0a64742d19c20cea32b4637c0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adeda99842f48f8d914c58ed8852dae4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#adeda99842f48f8d914c58ed8852dae4b">CaptureSettings</a> ()=default</td></tr>
-<tr class="separator:adeda99842f48f8d914c58ed8852dae4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521550dc407d67445d55981892da6626"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a521550dc407d67445d55981892da6626">CaptureSettings</a> (const <a class="el" href="classins__camera_1_1_capture_settings.html">CaptureSettings</a> &amp;other)</td></tr>
+<tr class="memitem:a521550dc407d67445d55981892da6626"><td class="memItemLeft" align="right" valign="top"><a id="a521550dc407d67445d55981892da6626"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CaptureSettings</b> (const <a class="el" href="classins__camera_1_1_capture_settings.html">CaptureSettings</a> &amp;other)</td></tr>
 <tr class="separator:a521550dc407d67445d55981892da6626"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9d0f8729729397f1ccbf3e9c695c7ba"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#af9d0f8729729397f1ccbf3e9c695c7ba">GetSettingTypes</a> () const</td></tr>
+<tr class="memitem:af9d0f8729729397f1ccbf3e9c695c7ba"><td class="memItemLeft" align="right" valign="top">std::vector&lt; SettingsType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#af9d0f8729729397f1ccbf3e9c695c7ba">GetSettingTypes</a> () const</td></tr>
 <tr class="memdesc:af9d0f8729729397f1ccbf3e9c695c7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">get a list of settings types you have set. Any settings not included in this list will not be applied to the camera.  <a href="classins__camera_1_1_capture_settings.html#af9d0f8729729397f1ccbf3e9c695c7ba">More...</a><br /></td></tr>
 <tr class="separator:af9d0f8729729397f1ccbf3e9c695c7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae169c6442a59b362879ebe5c7d9ea47f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#ae169c6442a59b362879ebe5c7d9ea47f">UpdateSettingTypes</a> (std::vector&lt; <a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a> &gt; &amp;types)</td></tr>
-<tr class="memdesc:ae169c6442a59b362879ebe5c7d9ea47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">set setting types to be applied mannually.  <a href="classins__camera_1_1_capture_settings.html#ae169c6442a59b362879ebe5c7d9ea47f">More...</a><br /></td></tr>
+<tr class="memitem:ae169c6442a59b362879ebe5c7d9ea47f"><td class="memItemLeft" align="right" valign="top"><a id="ae169c6442a59b362879ebe5c7d9ea47f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#ae169c6442a59b362879ebe5c7d9ea47f">UpdateSettingTypes</a> (std::vector&lt; SettingsType &gt; &amp;types)</td></tr>
+<tr class="memdesc:ae169c6442a59b362879ebe5c7d9ea47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">set setting types to be applied mannually. <br /></td></tr>
 <tr class="separator:ae169c6442a59b362879ebe5c7d9ea47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a616bbf04ef75dfbcda06510ccfb6cad1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a616bbf04ef75dfbcda06510ccfb6cad1">ResetSettingTypes</a> ()</td></tr>
-<tr class="memdesc:a616bbf04ef75dfbcda06510ccfb6cad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset setting types, any types recorded when you call SetXXX() previously will not be applied until you call SetXXX next time. however, the value already be applied will be kept  <a href="classins__camera_1_1_capture_settings.html#a616bbf04ef75dfbcda06510ccfb6cad1">More...</a><br /></td></tr>
+<tr class="memitem:a616bbf04ef75dfbcda06510ccfb6cad1"><td class="memItemLeft" align="right" valign="top"><a id="a616bbf04ef75dfbcda06510ccfb6cad1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a616bbf04ef75dfbcda06510ccfb6cad1">ResetSettingTypes</a> ()</td></tr>
+<tr class="memdesc:a616bbf04ef75dfbcda06510ccfb6cad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset setting types, any types recorded when you call SetXXX() previously will not be applied until you call SetXXX next time. however, the value already be applied will be kept <br /></td></tr>
 <tr class="separator:a616bbf04ef75dfbcda06510ccfb6cad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7418c2e4a06532754a950a78d77f843f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a7418c2e4a06532754a950a78d77f843f">SetValue</a> (<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a> type, int32_t value, bool apply_to_camera=true)</td></tr>
+<tr class="memitem:a7418c2e4a06532754a950a78d77f843f"><td class="memItemLeft" align="right" valign="top"><a id="a7418c2e4a06532754a950a78d77f843f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetValue</b> (SettingsType type, int32_t value, bool apply_to_camera=true)</td></tr>
 <tr class="separator:a7418c2e4a06532754a950a78d77f843f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a1b2f005b401385c43e08cbd660fb3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a0a1b2f005b401385c43e08cbd660fb3f">SetWhiteBalance</a> (<a class="el" href="namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4">PhotographyOptions_WhiteBalance</a> wb, bool apply_to_camera=true)</td></tr>
+<tr class="memitem:a0a1b2f005b401385c43e08cbd660fb3f"><td class="memItemLeft" align="right" valign="top"><a id="a0a1b2f005b401385c43e08cbd660fb3f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetWhiteBalance</b> (PhotographyOptions_WhiteBalance wb, bool apply_to_camera=true)</td></tr>
 <tr class="separator:a0a1b2f005b401385c43e08cbd660fb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a408c461067f5d03bcfb29127d658fc40"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a408c461067f5d03bcfb29127d658fc40">GetIntValue</a> (<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a> type) const</td></tr>
+<tr class="memitem:a408c461067f5d03bcfb29127d658fc40"><td class="memItemLeft" align="right" valign="top"><a id="a408c461067f5d03bcfb29127d658fc40"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetIntValue</b> (SettingsType type) const</td></tr>
 <tr class="separator:a408c461067f5d03bcfb29127d658fc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369e3f1d63c8416376f36199375e825b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4">PhotographyOptions_WhiteBalance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_capture_settings.html#a369e3f1d63c8416376f36199375e825b">WhiteBalance</a> ()</td></tr>
+<tr class="memitem:a369e3f1d63c8416376f36199375e825b"><td class="memItemLeft" align="right" valign="top"><a id="a369e3f1d63c8416376f36199375e825b"></a>
+PhotographyOptions_WhiteBalance&#160;</td><td class="memItemRight" valign="bottom"><b>WhiteBalance</b> ()</td></tr>
 <tr class="separator:a369e3f1d63c8416376f36199375e825b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -124,94 +129,10 @@ available settings and value range:</h2>
 <li>Contrast: 0~256, default 64</li>
 <li>Saturation:0~256, default 64</li>
 <li>Brightness:-256~256, default 0</li>
-<li>WhiteBalance: see <a class="el" href="namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4">PhotographyOptions_WhiteBalance</a></li>
+<li>WhiteBalance: see #PhotographyOptions_WhiteBalance</li>
 <li>Sharpness: 0~6, default 3 </li>
 </ul>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a0fc8d0a64742d19c20cea32b4637c0db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fc8d0a64742d19c20cea32b4637c0db">&#9670;&nbsp;</a></span>SettingsType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">ins_camera::CaptureSettings::SettingsType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0fc8d0a64742d19c20cea32b4637c0dbacbcdf65dc8a0c6d9a241c200e5a44385"></a>CaptureSettings_Contrast&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0fc8d0a64742d19c20cea32b4637c0dba757a3dafa4fde977e3aeaa761b66fbe0"></a>CaptureSettings_Saturation&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0fc8d0a64742d19c20cea32b4637c0dba7389bc7e4c4af71d3549dba82d383ccc"></a>CaptureSettings_Brightness&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0fc8d0a64742d19c20cea32b4637c0dba7f9ff6a381ed50e581f1d2c16550f5be"></a>CaptureSettings_Sharpness&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0fc8d0a64742d19c20cea32b4637c0dbaf561b4e472a69aabd80c26ce54142f95"></a>CaptureSettings_WhiteBalance&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adeda99842f48f8d914c58ed8852dae4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeda99842f48f8d914c58ed8852dae4b">&#9670;&nbsp;</a></span>CaptureSettings() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ins_camera::CaptureSettings::CaptureSettings </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a521550dc407d67445d55981892da6626"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a521550dc407d67445d55981892da6626">&#9670;&nbsp;</a></span>CaptureSettings() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ins_camera::CaptureSettings::CaptureSettings </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classins__camera_1_1_capture_settings.html">CaptureSettings</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a408c461067f5d03bcfb29127d658fc40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a408c461067f5d03bcfb29127d658fc40">&#9670;&nbsp;</a></span>GetIntValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t ins_camera::CaptureSettings::GetIntValue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af9d0f8729729397f1ccbf3e9c695c7ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9d0f8729729397f1ccbf3e9c695c7ba">&#9670;&nbsp;</a></span>GetSettingTypes()</h2>
 
@@ -219,7 +140,7 @@ available settings and value range:</h2>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a>&gt; ins_camera::CaptureSettings::GetSettingTypes </td>
+          <td class="memname">std::vector&lt;SettingsType&gt; ins_camera::CaptureSettings::GetSettingTypes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -232,126 +153,8 @@ available settings and value range:</h2>
 
 </div>
 </div>
-<a id="a616bbf04ef75dfbcda06510ccfb6cad1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a616bbf04ef75dfbcda06510ccfb6cad1">&#9670;&nbsp;</a></span>ResetSettingTypes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_camera::CaptureSettings::ResetSettingTypes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>reset setting types, any types recorded when you call SetXXX() previously will not be applied until you call SetXXX next time. however, the value already be applied will be kept </p>
-
-</div>
-</div>
-<a id="a7418c2e4a06532754a950a78d77f843f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7418c2e4a06532754a950a78d77f843f">&#9670;&nbsp;</a></span>SetValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_camera::CaptureSettings::SetValue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int32_t&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>apply_to_camera</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0a1b2f005b401385c43e08cbd660fb3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a1b2f005b401385c43e08cbd660fb3f">&#9670;&nbsp;</a></span>SetWhiteBalance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_camera::CaptureSettings::SetWhiteBalance </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4">PhotographyOptions_WhiteBalance</a>&#160;</td>
-          <td class="paramname"><em>wb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>apply_to_camera</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae169c6442a59b362879ebe5c7d9ea47f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae169c6442a59b362879ebe5c7d9ea47f">&#9670;&nbsp;</a></span>UpdateSettingTypes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_camera::CaptureSettings::UpdateSettingTypes </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classins__camera_1_1_capture_settings.html#a0fc8d0a64742d19c20cea32b4637c0db">SettingsType</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>types</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>set setting types to be applied mannually. </p>
-
-</div>
-</div>
-<a id="a369e3f1d63c8416376f36199375e825b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a369e3f1d63c8416376f36199375e825b">&#9670;&nbsp;</a></span>WhiteBalance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceins__camera.html#a8b19dcdbe229a389cf743d4e5e9808f4">PhotographyOptions_WhiteBalance</a> ins_camera::CaptureSettings::WhiteBalance </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>camera/<a class="el" href="photography__settings_8h_source.html">photography_settings.h</a></li>
+<li>D:/workspace/CameraSDK/include/camera/<a class="el" href="photography__settings_8h_source.html">photography_settings.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,10 +1,19 @@
 var searchData=
 [
-  ['onaudiodata_72',['OnAudioData',['../classins__camera_1_1_stream_delegate.html#a6811e730b735788deb83123fa3be880a',1,'ins_camera::StreamDelegate']]],
-  ['onexposuredata_73',['OnExposureData',['../classins__camera_1_1_stream_delegate.html#ac4fedf85a24ae9ac6ee9357c5503b3c5',1,'ins_camera::StreamDelegate']]],
-  ['ongyrodata_74',['OnGyroData',['../classins__camera_1_1_stream_delegate.html#a6bd70b32a13de1c33c580dc16453a289',1,'ins_camera::StreamDelegate']]],
-  ['onvideodata_75',['OnVideoData',['../classins__camera_1_1_stream_delegate.html#a0bde50842379790769fda32e9d5d5cc0',1,'ins_camera::StreamDelegate']]],
-  ['open_76',['Open',['../classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85',1,'ins_camera::Camera']]],
-  ['operator_28_29_77',['operator()',['../structins__camera_1_1_enum_class_hash.html#a839eb42a7d0a47a87dc47bf7fbf14e78',1,'ins_camera::EnumClassHash']]],
-  ['originurls_78',['OriginUrls',['../classins__camera_1_1_media_url.html#a18424916071e9d167b40aeb187a3800f',1,'ins_camera::MediaUrl']]]
+  ['setcapturesettings_33',['SetCaptureSettings',['../classins__camera_1_1_camera.html#ab17afc48ecc2afc1dcf4ab01577e8e48',1,'ins_camera::Camera']]],
+  ['setexposuresettings_34',['SetExposureSettings',['../classins__camera_1_1_camera.html#a39a2c3f4b097594671fa365e94b4aff2',1,'ins_camera::Camera']]],
+  ['setiso_35',['SetIso',['../classins__camera_1_1_exposure_settings.html#a07f605eaf0d7448d83eee7b93e9fe246',1,'ins_camera::ExposureSettings']]],
+  ['setshutterspeed_36',['SetShutterSpeed',['../classins__camera_1_1_exposure_settings.html#ab8958ac92c2a7e4a5400d59c10d3e76a',1,'ins_camera::ExposureSettings']]],
+  ['setstreamdelegate_37',['SetStreamDelegate',['../classins__camera_1_1_camera.html#a24be070fabbf91e396085f5d862e4889',1,'ins_camera::Camera']]],
+  ['settimelapseoption_38',['SetTimeLapseOption',['../classins__camera_1_1_camera.html#acab10969c6656a0f18f2256e74bd2c1e',1,'ins_camera::Camera']]],
+  ['setvideocaptureparams_39',['SetVideoCaptureParams',['../classins__camera_1_1_camera.html#a798f849e627c42fdfc5b78595dbe9a38',1,'ins_camera::Camera']]],
+  ['startlivestreaming_40',['StartLiveStreaming',['../classins__camera_1_1_camera.html#a7689ec69353e85c3b409c2c5babb855e',1,'ins_camera::Camera']]],
+  ['startrecording_41',['StartRecording',['../classins__camera_1_1_camera.html#a69e315f680fe4276f6f8860991dfc7ce',1,'ins_camera::Camera']]],
+  ['starttimelapse_42',['StartTimeLapse',['../classins__camera_1_1_camera.html#aa805005f6782afa8a35f54799dd44e37',1,'ins_camera::Camera']]],
+  ['stoplivestreaming_43',['StopLiveStreaming',['../classins__camera_1_1_camera.html#a85a911adc4681b519034f249734dcf7c',1,'ins_camera::Camera']]],
+  ['stoprecording_44',['StopRecording',['../classins__camera_1_1_camera.html#a18543d549b05ec8a34492374e4d0006e',1,'ins_camera::Camera']]],
+  ['stoptimelapse_45',['StopTimeLapse',['../classins__camera_1_1_camera.html#a65409a9b74165fa65b3f72f7ccb4b545',1,'ins_camera::Camera']]],
+  ['storagestatus_46',['StorageStatus',['../structins__camera_1_1_storage_status.html',1,'ins_camera']]],
+  ['streamdelegate_47',['StreamDelegate',['../classins__camera_1_1_stream_delegate.html',1,'ins_camera']]],
+  ['synclocaltimetocamera_48',['SyncLocalTimeToCamera',['../classins__camera_1_1_camera.html#ae35cdde0fb3fa1e24426bb8a7e30392c',1,'ins_camera::Camera']]]
 ];

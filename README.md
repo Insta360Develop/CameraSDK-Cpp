@@ -9,6 +9,8 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 | ONE R Wide Edition | http://insta360.com/product/insta360-oner_twin-edition |
 | ONE R 1-inch Edition | http://insta360.com/product/insta360-oner_1inch-edition |
 | ONE X2 | https://www.insta360.com/cn/product/insta360-onex2 |
+| ONE RS | https://www.insta360.com/cn/product/insta360-oners |
+| ONE X3 | https://www.insta360.com/cn/product/insta360-x3 |
 
 ### Supported platforms
 
@@ -16,7 +18,7 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 | :--- | :--- |
 | Windows | Windows 7 or later, only x64 supported |
 | MacOS | 10.8.2 or later, only x64 supported |
-| Linux | Ubuntu, other distributions need to be tested |
+| Linux | Ubuntu 16.04(x86_64), other distributions need to be tested |
 
 
 ## Table of contents
@@ -46,13 +48,18 @@ You need to upgrade to  a special version of firmware, [download here](https://i
 
 After upgraded, on camera, go to settings, find USB, set it to **Android** mode.
 
-#### For ONE R
+#### For ONE R/RS
 
 On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**, Set U-Disk Mode to **Mobile** Mode.
 
 #### ONE X2
 
 On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**
+
+#### ONE X3 
+
+On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**
+
 ### <a name="install-driver" />Install Driver
 
 **On Linux**, please make sure your distribution has libusb installed. 
@@ -77,7 +84,7 @@ sudo make install
 
 After installing driver, check whether the camera is detected via `lsusb` command, if any USB device with vender id 0x2e1a is found, congratulations, your driver is successfully installed.
 
-**Note**: On Linux，demo program must be run by sudo, for example
+###### **Note**: On Linux，demo program must be run by "**sudo**", for example
 
 ```
 sudo ./CameraSDKDemo //for ubuntu

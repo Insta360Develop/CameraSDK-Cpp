@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['native_5fconnection_5finfo_71',['native_connection_info',['../structins__camera_1_1_device_connection_info.html#aa45ce491086e3a2272a422548da142ce',1,'ins_camera::DeviceConnectionInfo']]]
+  ['recordparams_31',['RecordParams',['../structins__camera_1_1_record_params.html',1,'ins_camera']]],
+  ['resetsettingtypes_32',['ResetSettingTypes',['../classins__camera_1_1_capture_settings.html#a616bbf04ef75dfbcda06510ccfb6cad1',1,'ins_camera::CaptureSettings']]]
 ];
