@@ -1,5 +1,8 @@
 # CameraSDK-Cpp
-CameraSDK-Cpp is a C++ library to control Insta360 cameras.
+CameraSDK-Cpp is a C++ library to control Insta360 cameras. 
+
+
+Note：On windows，use Vistual Studio 2015. On ubuntu, use g++;
 
 ### Supported cameras
 | Model | Link |
@@ -215,5 +218,3 @@ if (success) {
 ```
 
 For more details, please view documentations under /doc directory.
-
-Note：On windows，use Vistual Studio 2015. On ubuntu, use g++;
