@@ -2,11 +2,11 @@
 CXX := g++
 
 # Directories
-SRCDIR := src
+SRCDIR := ./src
 INCDIR := include
 LIBDIR := lib
-BINDIR := bin
-OBJDIR := obj
+BINDIR := ./bin
+OBJDIR := ./obj
 
 # The target binary to compile to
 TARGET := $(BINDIR)/CameraSDKTest
@@ -15,13 +15,14 @@ TARGET := $(BINDIR)/CameraSDKTest
 CXXFLAGS := -Wall -std=c++20 -I$(INCDIR)
 
 # Linker flags
-LDFLAGS := -L$(LIBDIR) -llibCameraSDK
+LDFLAGS := -L$(LIBDIR) -lCameraSDK
 
 # Source files
-SOURCES := $(wildcard $(SRCDIR)/*.cc) $(wildcard $(SRCDIR)/*.cpp)
+
+SOURCES := $(shell find $(SRCDIR) -name '*.cpp' -or -name '*.c' -or -name '*.s' -or -name '*.cc')
 
 # Object files
-OBJECTS := $(SOURCES:$(SRCDIR)/%.cc=$(OBJDIR)/%.o) $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
+OBJECTS := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SOURCES))
 
 # .PHONY used to prevent make from doing something with a file named 'all' or 'clean'
 .PHONY: all clean
@@ -32,11 +33,12 @@ all: $(TARGET)
 $(TARGET): $(OBJECTS)
 	$(CXX) $^ $(LDFLAGS) -o $@
 
+$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 $(OBJDIR)/%.o: $(SRCDIR)/%.cc
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJDIR)/*.o $(TARGET)

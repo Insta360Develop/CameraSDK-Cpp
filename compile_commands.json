@@ -1,0 +1,17 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Wall",
+      "-std=c++20",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/main.o",
+      "src/main.cpp"
+    ],
+    "directory": "/home/ozinchenko/insta360/CameraSDK-Cpp",
+    "file": "/home/ozinchenko/insta360/CameraSDK-Cpp/src/main.cpp",
+    "output": "/home/ozinchenko/insta360/CameraSDK-Cpp/obj/main.o"
+  }
+]

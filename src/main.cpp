@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <thread>
 #include <regex>
-#include <inlude/camera/camera.h>
+#include <camera/camera.h>
 #include <camera/photography_settings.h>
 #include <camera/device_discovery.h>
 
@@ -46,7 +46,7 @@ private:
     int64_t last_timestamp = 0;
 };
 
-int main(int argc, char* argv[]) {
+int main() {
     std::cout << "begin open camera" << std::endl;
     ins_camera::DeviceDiscovery discovery;
     auto list = discovery.GetAvailableDevices();
