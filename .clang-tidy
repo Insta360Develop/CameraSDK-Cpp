@@ -1,0 +1,10 @@
+---
+Checks:          '-*,clang-diagnostic-*,clang-analyzer-*,cppcoreguidelines-*,modernize-*,bugprone-*,performance-*,readability-*,-modernize-use-trailing-return-type, -readability-braces-around-statements, -modernize-use-nodiscard, -modernize-return-braced-init-list, -modernize-use-equals-default, -cppcoreguidelines-special-member-functions, -cppcoreguidelines-non-private-member-variables-in-classes'
+CheckOptions:
+    - { key: modernize-use-override.IgnoreDestructors,  value: true }
+    - { key: cppcoreguidelines-explicit-virtual-functions.IgnoreDestructors,  value: true }
+AnalyzeTemporaryDtors: false
+WarningsAsErrors:    ''
+HeaderFilterRegex:   ''
+FormatStyle:         none
+...
