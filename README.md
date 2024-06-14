@@ -132,15 +132,20 @@ After **cam.Open()**, the DeviceDescriptor is no longer used.
 
 ### <a name='takepicture' />Take Picture
 We try to simplify the SDK to make integration for developers more easily.
-```C++ 
-#include <camera/camera.h>
-...
-    
+
+```
+// only for x4.  When shooting x4, you need to switch to the corresponding shooting mode first.
 bool ret = cam->SetPhotoSubMode(ins_camera::SubPhotoMode::PHOTO_SINGLE);
 if (!ret) {
     std::cout << "change submode failed!" << std::endl;
     continue;
 }
+```
+
+```C++ 
+#include <camera/camera.h>
+...
+
 
 const auto url = cam.TakePhoto();
 if (url.Empty()) {
@@ -154,15 +159,21 @@ The full url might like this: http://localhost:9099/DCIM/Camera01/IMG_20200312_1
 
 ### <a name='recording' />Recording
 Recording is as simple as TakePicture
-```C++
-#include <camera/camera.h>
-...
+
+```
+// only for x4.  When shooting x4, you need to switch to the corresponding shooting mode first.    
 bool ret = cam->SetVideoSubMode(ins_camera::SubVideoMode::VIDEO_NORMAL);
 if (!ret) {
     std::cout << "change submode failed!" << std::endl;
     continue;
 }
+```
 
+
+
+```C++
+#include <camera/camera.h>
+...
 if (!cam.SetVideoCaptureParams({ins_camera::VideoResolution::RES_3840_2160p30,
   1024 * 1024 * 60
 })) {
@@ -233,3 +244,5 @@ if (success) {
 For more details, please view documentations under /doc directory.
 
 Note：On windows，use Vistual Studio 2015. On ubuntu, use g++;
+
+For X4 HDR photo ,the output results are already integrated in machine;
