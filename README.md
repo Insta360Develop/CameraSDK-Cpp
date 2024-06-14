@@ -11,6 +11,7 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 | ONE X2 | https://www.insta360.com/cn/product/insta360-onex2 |
 | ONE RS | https://www.insta360.com/cn/product/insta360-oners |
 | ONE X3 | https://www.insta360.com/cn/product/insta360-x3 |
+| ONE X4 | https://www.insta360.com/cn/product/insta360-x4 |
 
 ### Supported platforms
 
@@ -60,6 +61,10 @@ On camera, swipe down the screen to main menu, go to Settings->General, Set USB 
 
 On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**
 
+
+
+
+
 ### <a name="install-driver" />Install Driver
 
 **On Linux**, please make sure your distribution has libusb installed. 
@@ -89,8 +94,6 @@ After installing driver, check whether the camera is detected via `lsusb` comman
 ```
 sudo ./CameraSDKDemo //for ubuntu
 ```
-
-**On Mac OSX**, nothing need to be installed.
 
 **On Windows**, please make sure libusbK driver is installed. You could do that by install [libusbK](https://sourceforge.net/projects/libusbk/files/libusbK-release/3.0.7.0/) directly, or using [zadig](https://zadig.akeo.ie/) to help install the libusbK driver.	
 
@@ -132,6 +135,13 @@ We try to simplify the SDK to make integration for developers more easily.
 ```C++ 
 #include <camera/camera.h>
 ...
+    
+bool ret = cam->SetPhotoSubMode(ins_camera::SubPhotoMode::PHOTO_SINGLE);
+if (!ret) {
+    std::cout << "change submode failed!" << std::endl;
+    continue;
+}
+
 const auto url = cam.TakePhoto();
 if (url.Empty()) {
     std::cout << "failed to take picture" << std::endl;
@@ -147,6 +157,12 @@ Recording is as simple as TakePicture
 ```C++
 #include <camera/camera.h>
 ...
+bool ret = cam->SetVideoSubMode(ins_camera::SubVideoMode::VIDEO_NORMAL);
+if (!ret) {
+    std::cout << "change submode failed!" << std::endl;
+    continue;
+}
+
 if (!cam.SetVideoCaptureParams({ins_camera::VideoResolution::RES_3840_2160p30,
   1024 * 1024 * 60
 })) {

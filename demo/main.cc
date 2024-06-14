@@ -5,6 +5,10 @@
 #include <camera/device_discovery.h>
 #include <regex>
 
+#ifdef WIN32
+#include <direct.h>
+#endif
+
 class TestStreamDelegate : public ins_camera::StreamDelegate {
 public:
     TestStreamDelegate() {
@@ -69,7 +73,7 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    std::cout << "http base url:" << cam->GetHttpBaseUrl() << std::endl;
+    //std::cout << "http base url:" << cam->GetHttpBaseUrl() << std::endl;
 
     std::shared_ptr<ins_camera::StreamDelegate> delegate = std::make_shared<TestStreamDelegate>();
     cam->SetStreamDelegate(delegate);
@@ -97,12 +101,21 @@ int main(int argc, char* argv[]) {
     std::cout << "20: stop timelapse " << std::endl;
     std::cout << "21: get batty " << std::endl;
     std::cout << "22: get storage info " << std::endl;
+    std::cout << "23: get recording file " << std::endl;
+    std::cout << "30: batch download list files " << std::endl;
     std::cout << "0: exit" << std::endl;
 
     auto camera_type = cam->GetCameraType();
 
     auto start = time(NULL);
     cam->SyncLocalTimeToCamera(start);
+
+    /*************************demo for 普通照片72MP和 HDR录制5.7K******************/
+    //cam->SetPhotoSize(ins_camera::FUNCTION_MODE_NORMAL_IMAGE, ins_camera::PhotoSize::Size_6912_3456);
+    //ins_camera::RecordParams record_params_test;
+    //record_params_test.resolution = ins_camera::VideoResolution::RES_2880_2880P30;
+    //cam->SetVideoCaptureParams(record_params_test, ins_camera::CameraFunctionMode::FUNCTION_MODE_HDR_VIDEO);
+    /*************************demo for 普通照片72MP和 HDR录制5.7K******************/
 
     int option;
     while (true) {
@@ -119,6 +132,12 @@ int main(int argc, char* argv[]) {
 
         // take photo
         if (option == 1) {
+            bool ret = cam->SetPhotoSubMode(ins_camera::SubPhotoMode::PHOTO_SINGLE);
+            if (!ret) {
+                std::cout << "change submode failed!" << std::endl;
+                continue;
+            }
+
             const auto url = cam->TakePhoto();
             if (!url.IsSingleOrigin() || url.Empty()) {
                 std::cout << "failed to take picture" << std::endl;
@@ -166,7 +185,9 @@ int main(int argc, char* argv[]) {
             std::cin >> file_to_save;
 
             const auto ret = cam->DownloadCameraFile(file_to_download,
-                file_to_save);
+                file_to_save, [](int64_t current, int64_t total_size) {
+                    std::cout << "current :" << current << "; total_size: " << total_size << std::endl;
+                });
             if (ret) {
                 std::cout << "Download " << file_to_download << " succeed!!!" << std::endl;
             }
@@ -176,10 +197,16 @@ int main(int argc, char* argv[]) {
         }
 
         if (option == 6) {
-            if (!cam->SetVideoCaptureParams({
-                    ins_camera::VideoResolution::RES_3040_3040P24,
-                    1024 * 1024 * 10
-                }, ins_camera::CameraFunctionMode::FUNCTION_MODE_NORMAL_VIDEO)) {
+            bool ret = cam->SetVideoSubMode(ins_camera::SubVideoMode::VIDEO_NORMAL);
+            if (!ret) {
+                std::cout << "change submode failed!" << std::endl;
+                continue;
+            }
+
+            ins_camera::RecordParams record_params;
+            record_params.resolution = ins_camera::VideoResolution::RES_2880_2880P60;
+            record_params.bitrate = 1024 * 1024 * 10;
+            if (!cam->SetVideoCaptureParams(record_params, ins_camera::CameraFunctionMode::FUNCTION_MODE_NORMAL_VIDEO)) {
                 std::cerr << "failed to set capture settings." << std::endl;
             }
             else {
@@ -219,7 +246,7 @@ int main(int argc, char* argv[]) {
             std::cin >> bias;
             auto exposure = std::make_shared<ins_camera::ExposureSettings>();
             auto exposure_mode = ins_camera::PhotographyOptions_ExposureMode::PhotographyOptions_ExposureOptions_Program_AUTO;
-            if (camera_type == ins_camera::CameraType::Insta360X3) {
+            if (camera_type == ins_camera::CameraType::Insta360X3 || camera_type == ins_camera::CameraType::Insta360X4) {
                 exposure_mode = ins_camera::PhotographyOptions_ExposureMode::PhotographyOptions_ExposureOptions_Program_FULL_AUTO;
             }
             exposure->SetExposureMode(exposure_mode);
@@ -253,15 +280,16 @@ int main(int argc, char* argv[]) {
 
         if (option == 10) {
             ins_camera::LiveStreamParam param;
-            param.video_resolution = ins_camera::VideoResolution::RES_2560_1280P30;
-            param.lrv_video_resulution = ins_camera::VideoResolution::RES_1152_768P30;
+            param.video_resolution = ins_camera::VideoResolution::RES_720_360P30;
+            param.lrv_video_resulution = ins_camera::VideoResolution::RES_720_360P30;
             param.video_bitrate = 1024 * 1024 / 2;
             param.enable_audio = false;
-            param.using_lrv = true;
+            param.using_lrv = false;
             if (cam->StartLiveStreaming(param)) {
                 std::cout << "successfully started live stream" << std::endl;
             }
         }
+
         if (option == 11) {
             if (cam->StopLiveStreaming()) {
                 std::cout << "success!" << std::endl;
@@ -281,27 +309,23 @@ int main(int argc, char* argv[]) {
         }
 
         if (option == 17) {
-            int test_cout = 100;
-            int test = -1;
-            while (test_cout-- != 0) {
-                const auto url = cam->TakePhoto();
-                if (!url.IsSingleOrigin() || url.Empty()) {
-                    std::cout << "failed to take picture" << std::endl;
-                    return -1;
-                }
-
-                std::string download_url = url.GetSingleOrigin();
-                std::string save_path = "D:/testImage" + download_url;
-                const auto ret = cam->DownloadCameraFile(download_url, save_path);
-                if (ret) {
-                    std::cout << "Download " << download_url << " succeed!!!" << std::endl;
-                }
-                else {
-                    std::cout << "Download " << download_url << " failed!!!" << std::endl;
-                }
+            const auto url = cam->TakePhoto();
+            if (!url.IsSingleOrigin() || url.Empty()) {
+                std::cout << "failed to take picture" << std::endl;
+                return -1;
             }
-            cam->Close();
-            return 0;
+
+            std::string download_url = url.GetSingleOrigin();
+            std::string save_path = "C:/Users/admin/Desktop/test" + download_url;
+            const auto ret = cam->DownloadCameraFile(download_url, save_path);
+            if (ret) {
+                std::cout << "Download " << download_url << " succeed!!!" << std::endl;
+            }
+            else {
+                std::cout << "Download " << download_url << " failed!!!" << std::endl;
+            }
+
+            std::this_thread::sleep_for(std::chrono::microseconds(1));
         }
 
         if (option == 18) {
@@ -315,12 +339,23 @@ int main(int argc, char* argv[]) {
         }
 
         if (option == 19) {
-            ins_camera::TimelapseParam param;
+            bool ret = cam->SetVideoSubMode(ins_camera::SubVideoMode::VIDEO_TIMELAPSE);
+            if (!ret) {
+                std::cout << "change submode failed!" << std::endl;
+                continue;
+            }
+
+            // 以RS一英寸为例 4k对应的分辨率是RES_3920_1920P30 6k对应的分辨率是RES_3920_1920P30
+            // 4k为例
+            ins_camera::RecordParams record_params;
+            record_params.resolution = ins_camera::VideoResolution::RES_5120_5120P30;
+            if (!cam->SetVideoCaptureParams(record_params, ins_camera::CameraFunctionMode::FUNCTION_MODE_MOBILE_TIMELAPSE)) {
+                std::cerr << "failed to set capture settings." << std::endl;
+                break;
+            }
+
             //mode 是你相机所支持的模式
-            param.mode = ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO;
-            param.duration = -1;
-            param.lapseTime = 3000;
-            param.accelerate_fequency = 5;
+            ins_camera::TimelapseParam param = { ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO, 10,1000,5 };
             if (!cam->SetTimeLapseOption(param)) {
                 std::cerr << "failed to set capture settings." << std::endl;
             }
@@ -377,10 +412,46 @@ int main(int argc, char* argv[]) {
             std::cout << "state : " << status.state << std::endl;
         }
 
+        if (option == 23) {
+            std::vector<std::string> file_list;
+            bool ret = cam->GetRecordingFiles(file_list, 0, 100);
+            if (!ret) {
+                std::cerr << "GetRecordingFiles failed" << std::endl;
+                continue;
+            }
+            for (auto& file : file_list) {
+                std::cout << file << std::endl;
+            }
+        }
+
+        if (option == 24) {
+            bool is_video = true;
+            bool ret;
+            if (is_video) {
+                ret = cam->SetVideoSubMode(ins_camera::SubVideoMode::VIDEO_NORMAL);
+            }
+            else {
+                ret = cam->SetPhotoSubMode(ins_camera::SubPhotoMode::PHOTO_SINGLE);
+            }
+            if (ret) {
+                std::cout << "Change Submode Succeed!" << std::endl;
+                continue;
+            }
+            else {
+                std::cout << "Change Submode Failed!" << std::endl;
+                continue;
+            }
+        }
+
         if (option == 30) {
+            std::string file_to_save;
+            std::cout << "please input full file path to save: ";
+            std::cin >> file_to_save;
+
             const auto file_list = cam->GetCameraFilesList();
             for (const auto& file : file_list) {
-                std::string save_path = "D:/testImage" + file;
+                std::string fileName = file.substr(file.find_last_of("/"));
+                std::string save_path = file_to_save + fileName;
                 int ret = cam->DownloadCameraFile(file, save_path);
                 if (ret) {
                     std::cout << "Download " << file << " succeed!!!" << std::endl;
@@ -401,6 +472,8 @@ int main(int argc, char* argv[]) {
             }
         }
     }
+
     cam->Close();
+
     return 0;
 }

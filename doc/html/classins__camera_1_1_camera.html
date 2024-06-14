@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classins__camera_1_1_camera-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ins_camera::Camera Class Reference</div>  </div>
@@ -106,10 +107,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a00a6bbcd2f4dda60fd9b35eee927d464"><td class="memItemLeft" align="right" valign="top">CaptureStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a00a6bbcd2f4dda60fd9b35eee927d464">GetCaptureCurrentStatus</a> () const</td></tr>
 <tr class="memdesc:a00a6bbcd2f4dda60fd9b35eee927d464"><td class="mdescLeft">&#160;</td><td class="mdescRight">get capture current status of camera. be sure to call this function after <a class="el" href="classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85" title="Open camera and start session.">Open()</a>  <a href="classins__camera_1_1_camera.html#a00a6bbcd2f4dda60fd9b35eee927d464">More...</a><br /></td></tr>
 <tr class="separator:a00a6bbcd2f4dda60fd9b35eee927d464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db83b2420610367ecdab8020c641ac4"><td class="memItemLeft" align="right" valign="top"><a id="a8db83b2420610367ecdab8020c641ac4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a8db83b2420610367ecdab8020c641ac4">SetServicePort</a> (int port)</td></tr>
+<tr class="memdesc:a8db83b2420610367ecdab8020c641ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set service port of download service be sure to call this function before <a class="el" href="classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85" title="Open camera and start session.">Open()</a> <br /></td></tr>
+<tr class="separator:a8db83b2420610367ecdab8020c641ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35dbf621cb161e1044b472c986c78e4d"><td class="memItemLeft" align="right" valign="top"><a id="a35dbf621cb161e1044b472c986c78e4d"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a35dbf621cb161e1044b472c986c78e4d">GetCameraOffset</a> () const</td></tr>
 <tr class="memdesc:a35dbf621cb161e1044b472c986c78e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get offset of camera be sure to call this function after <a class="el" href="classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85" title="Open camera and start session.">Open()</a> <br /></td></tr>
 <tr class="separator:a35dbf621cb161e1044b472c986c78e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392795f4acecde2ae15c1bd9f57e82be"><td class="memItemLeft" align="right" valign="top"><a id="a392795f4acecde2ae15c1bd9f57e82be"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a392795f4acecde2ae15c1bd9f57e82be">GetCameraV3Offset</a> () const</td></tr>
+<tr class="memdesc:a392795f4acecde2ae15c1bd9f57e82be"><td class="mdescLeft">&#160;</td><td class="mdescRight">get v3 offset of camera be sure to call this function after <a class="el" href="classins__camera_1_1_camera.html#af0540873ceac88ab3c1e482cb111ba85" title="Open camera and start session.">Open()</a> <br /></td></tr>
+<tr class="separator:a392795f4acecde2ae15c1bd9f57e82be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d64c329fdf4b2a1a5786351f76410dd"><td class="memItemLeft" align="right" valign="top"><a id="a7d64c329fdf4b2a1a5786351f76410dd"></a>
 VideoEncodeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a7d64c329fdf4b2a1a5786351f76410dd">GetVideoEncodeType</a> () const</td></tr>
 <tr class="memdesc:a7d64c329fdf4b2a1a5786351f76410dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">get current camera encode type(h264 or h265) <br /></td></tr>
@@ -154,10 +163,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a1420e8b3c70858bb52a149cc3323630f">DeleteCameraFile</a> (const std::string &amp;filePath) const</td></tr>
 <tr class="memdesc:a1420e8b3c70858bb52a149cc3323630f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the specified file from camera. <br /></td></tr>
 <tr class="separator:a1420e8b3c70858bb52a149cc3323630f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b6b12fb302bb86ffa2ba0662f9ea6ba"><td class="memItemLeft" align="right" valign="top"><a id="a0b6b12fb302bb86ffa2ba0662f9ea6ba"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a0b6b12fb302bb86ffa2ba0662f9ea6ba">DownloadCameraFile</a> (const std::string &amp;remoteFilePath, const std::string &amp;localFilePath) const</td></tr>
-<tr class="memdesc:a0b6b12fb302bb86ffa2ba0662f9ea6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the specified file from camera. <br /></td></tr>
-<tr class="separator:a0b6b12fb302bb86ffa2ba0662f9ea6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a204ce87e1a0ff0027ff50369f36e24"><td class="memItemLeft" align="right" valign="top"><a id="a8a204ce87e1a0ff0027ff50369f36e24"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a8a204ce87e1a0ff0027ff50369f36e24">DownloadCameraFile</a> (const std::string &amp;remoteFilePath, const std::string &amp;localFilePath, DownloadProgressCallBack callback=nullptr) const</td></tr>
+<tr class="memdesc:a8a204ce87e1a0ff0027ff50369f36e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the specified file from camera. <br /></td></tr>
+<tr class="separator:a8a204ce87e1a0ff0027ff50369f36e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88779713637494ff158adb14e72b582"><td class="memItemLeft" align="right" valign="top"><a id="ad88779713637494ff158adb14e72b582"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#ad88779713637494ff158adb14e72b582">CancelDownload</a> ()</td></tr>
+<tr class="memdesc:ad88779713637494ff158adb14e72b582"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancal the file that downloading, and it will not be deleted it need delete it by caller. <br /></td></tr>
+<tr class="separator:ad88779713637494ff158adb14e72b582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa023f2a2b2ee095095c67fa7a05dde8b"><td class="memItemLeft" align="right" valign="top"><a id="aa023f2a2b2ee095095c67fa7a05dde8b"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#aa023f2a2b2ee095095c67fa7a05dde8b">GetCameraFilesList</a> () const</td></tr>
 <tr class="memdesc:aa023f2a2b2ee095095c67fa7a05dde8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of files stored in camera storage card. <br /></td></tr>
@@ -181,6 +194,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#acafd3ea593b4d1e45a8e02da148be4cf">IsConnected</a> ()</td></tr>
 <tr class="memdesc:acafd3ea593b4d1e45a8e02da148be4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">device is connected <br /></td></tr>
 <tr class="separator:acafd3ea593b4d1e45a8e02da148be4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacf510be71e163c142f6fe9629877f9"><td class="memItemLeft" align="right" valign="top"><a id="aeacf510be71e163c142f6fe9629877f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#aeacf510be71e163c142f6fe9629877f9">SetTimeout</a> (int time_out_ms)</td></tr>
+<tr class="memdesc:aeacf510be71e163c142f6fe9629877f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetTimeout, default is 10000ms. <br /></td></tr>
+<tr class="separator:aeacf510be71e163c142f6fe9629877f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c5ad67878c5d1b784c5a6c9a0e2b241"><td class="memItemLeft" align="right" valign="top"><a id="a1c5ad67878c5d1b784c5a6c9a0e2b241"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#a1c5ad67878c5d1b784c5a6c9a0e2b241">GetBatteryStatus</a> (<a class="el" href="structins__camera_1_1_battery_status.html">BatteryStatus</a> &amp;status)</td></tr>
 <tr class="memdesc:a1c5ad67878c5d1b784c5a6c9a0e2b241"><td class="mdescLeft">&#160;</td><td class="mdescRight">get battry info <br /></td></tr>
@@ -193,6 +210,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__camera_1_1_camera.html#aa4e20d8b2e7c4c33e7eb4cbda9cef4b3">GetHttpBaseUrl</a> () const</td></tr>
 <tr class="memdesc:aa4e20d8b2e7c4c33e7eb4cbda9cef4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get http base url with trailing slash. eg. "http://127.0.0.1:9099/", you could get url of camera file by concanate base url and file uri <br /></td></tr>
 <tr class="separator:aa4e20d8b2e7c4c33e7eb4cbda9cef4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10603bce3a2d8e19b15944b380f556d1"><td class="memItemLeft" align="right" valign="top"><a id="a10603bce3a2d8e19b15944b380f556d1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetPhotoSize</b> (CameraFunctionMode mode, const PhotoSize &amp;photo_size)</td></tr>
+<tr class="separator:a10603bce3a2d8e19b15944b380f556d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c0a18316b9ae14074ea604263e092d"><td class="memItemLeft" align="right" valign="top"><a id="ac8c0a18316b9ae14074ea604263e092d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetActiveSensor</b> (SensorDevice sensor_device)</td></tr>
+<tr class="separator:ac8c0a18316b9ae14074ea604263e092d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581a836ca794872ac81a9f347dd6e155"><td class="memItemLeft" align="right" valign="top"><a id="a581a836ca794872ac81a9f347dd6e155"></a>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetCameraMediaTime</b> () const</td></tr>
+<tr class="separator:a581a836ca794872ac81a9f347dd6e155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6ee60150a025d9dc9867462852ac44"><td class="memItemLeft" align="right" valign="top"><a id="acf6ee60150a025d9dc9867462852ac44"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetVideoSubMode</b> (SubVideoMode video_mode)</td></tr>
+<tr class="separator:acf6ee60150a025d9dc9867462852ac44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c5852de7bb2ba806106f73ae28d575"><td class="memItemLeft" align="right" valign="top"><a id="a11c5852de7bb2ba806106f73ae28d575"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetPhotoSubMode</b> (SubPhotoMode photo_mode)</td></tr>
+<tr class="separator:a11c5852de7bb2ba806106f73ae28d575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa458409845ef97374a32e4555127f789"><td class="memItemLeft" align="right" valign="top"><a id="aa458409845ef97374a32e4555127f789"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReportAppid</b> ()</td></tr>
+<tr class="separator:aa458409845ef97374a32e4555127f789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad714f09282b2cfc3242fd481b3d76b93"><td class="memItemLeft" align="right" valign="top"><a id="ad714f09282b2cfc3242fd481b3d76b93"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetRecordingFiles</b> (std::vector&lt; std::string &gt; &amp;file_list, int32_t start, int32_t limit)</td></tr>
+<tr class="separator:ad714f09282b2cfc3242fd481b3d76b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a51de13a5213c418208294a484bb6b391"><td class="memItemLeft" align="right" valign="top"><a id="a51de13a5213c418208294a484bb6b391"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLogPath</b> (const std::string log_path)</td></tr>
+<tr class="separator:a51de13a5213c418208294a484bb6b391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa599019b5e4506db610afeb5031d9874"><td class="memItemLeft" align="right" valign="top"><a id="aa599019b5e4506db610afeb5031d9874"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLogLevel</b> (LogLevel level)</td></tr>
+<tr class="separator:aa599019b5e4506db610afeb5031d9874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that represents Insta360 camera,support Insta360 ONE X, Insta360 ONE R. </p>
