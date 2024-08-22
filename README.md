@@ -154,14 +154,14 @@ if (url.Empty()) {
 }
 std::cout << "Take picture done: " << url.GetSingleOrigin() << std::endl;
 ```
-Once camera be opened, a http tunnel is created on http://localhost:9099. You could make a http request to access the image on camera.
-The full url might like this: http://localhost:9099/DCIM/Camera01/IMG_20200312_113006_00_261.jpg
+Once the camera is opened, an http tunnel is created at http://localhost:9099. You can make an http request to access the images on the camera.
+The full url might look like this: http://localhost:9099/DCIM/Camera01/IMG_20200312_113006_00_261.jpg
 
 ### <a name='recording' />Recording
-Recording is as simple as TakePicture
+Recording is as simple as taking picture
 
 ```
-// only for x4.  When shooting x4, you need to switch to the corresponding shooting mode first.    
+// only for x4.  When using x4, you need to switch to the corresponding shooting mode first.    
 bool ret = cam->SetVideoSubMode(ins_camera::SubVideoMode::VIDEO_NORMAL);
 if (!ret) {
     std::cout << "change submode failed!" << std::endl;
@@ -202,7 +202,7 @@ for(auto& origin_url: origins) {
     LOG(INFO) << "url:" << origin_url;
 }
 ```
-Same as Picture, you can access the video via http request. The returned MediaUrl instance may contains multiple origin urls as well as low bitrate video urls.
+Same as Picture, you can access the video via http request. The returned MediaUrl instance may contain multiple origin urls as well as low bitrate video urls.
 
 ### <a name="exposure-settings" />Set Exposure Settings
 Exposure settings are independent between function modes(like TakePicture and Recording). So you need to specify function mode when you set exposure settings.
@@ -243,6 +243,6 @@ if (success) {
 
 For more details, please view documentations under /doc directory.
 
-Note：On windows，use Vistual Studio 2015. On ubuntu, use g++;
+Note: On Windows, use Visual Studio 2015; on Ubuntu, use g++.  
 
-For X4 HDR photo ,the output results are already integrated in machine;
+For X4 HDR photos, the output results are already integrated in machine.
