@@ -24,15 +24,15 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 
 ## Table of contents
 - [Prerequisite](#prerequistie)
-  - [Setup your camera connection mode](#setup-camera).
+  - [Set Up Your Camera Connection Mode](#setup-camera)
   - [Install Driver](#install-driver)
-- [Running test demo](#running-demo)
-- [Get started](#get-started)
-  + [Discover and connect to camera](#connect)
+- [Run Test Demo](#running-demo)
+- [Get Started](#get-started)
+  + [Discover and Connect to Camera](#connect)
   + [Take Picture](#takepicture)
-  + [Recording](#recording)
+  + [Record Video](#recording)
   + [Set Exposure Settings](#exposure-settings)
-  + [Set Capature Settings](#capture-settings)
+  + [Set Capture Settings](#capture-settings)
 
 
 ## <a name="prerequistie" />Prerequisite
