@@ -36,30 +36,30 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 
 
 ## <a name="prerequistie" />Prerequisite
-Before running test demo, there are several work need to be prepared. 
+Before running the test demo, there are several steps that need to be prepared. 
 
-### <a name="setup-camera" />Setup your camera connection mode
+### <a name="setup-camera" />Set Up Your Camera Connection Mode
 
-By default, when you connect Insta360 cameras to your computer, the camera will switch to udisk mode automatically, which makes the camera as a USB storage device.
-We need to switch the camera to correct mode before we can connect and control it.
+By default, when you connect Insta360 cameras to your computer, the camera will switch to udisk mode automatically, making the camera act as a USB storage device.
+You need to switch the camera to the correct mode before you can connect and control it.
 
 #### For ONE X
 
-You need to upgrade to  a special version of firmware, [download here](https://insta360-dev.oss-cn-hangzhou.aliyuncs.com/developer/releases/a33b3362-4767-47c3-ba9d-6ed07febb210.zip)
+You need to upgrade to  a special version of firmware, [download it here](https://insta360-dev.oss-cn-hangzhou.aliyuncs.com/developer/releases/a33b3362-4767-47c3-ba9d-6ed07febb210.zip)
 
-After upgraded, on camera, go to settings, find USB, set it to **Android** mode.
+After upgrading, on camera, go to settings, find USB, set it to **Android** mode.
 
 #### For ONE R/RS
 
-On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**, Set U-Disk Mode to **Mobile** Mode.
+On the camera, swipe down the screen to the main menu, go to Settings->General, set USB Mode to **Android**, and set U-Disk Mode to **Mobile** Mode.
 
 #### ONE X2
 
-On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**
+On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**
 
 #### ONE X3 
 
-On camera, swipe down the screen to main menu, go to Settings->General, Set USB Mode to **Android**
+On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**
 
 
 
