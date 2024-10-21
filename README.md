@@ -55,7 +55,7 @@ On the camera, swipe down the screen to the main menu, go to Settings->General, 
 
 On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**
 
-#### ONE X3 
+#### X3 
 
 On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**
 
@@ -132,7 +132,7 @@ After **cam.Open()**, the DeviceDescriptor is no longer used.
 We try to simplify the SDK to make integration for developers more easily.
 
 ```
-// only for x4.  When shooting x4, you need to switch to the corresponding shooting mode first.
+// Only for X4.  When shooting X4, you need to switch to the corresponding shooting mode first.
 bool ret = cam->SetPhotoSubMode(ins_camera::SubPhotoMode::PHOTO_SINGLE);
 if (!ret) {
     std::cout << "change submode failed!" << std::endl;
@@ -159,7 +159,7 @@ The full url might look like this: http://localhost:9099/DCIM/Camera01/IMG_20200
 Recording is as simple as taking picture
 
 ```
-// only for x4.  When using x4, you need to switch to the corresponding shooting mode first.    
+// only for X4.  When using X4, you need to switch to the corresponding shooting mode first.    
 bool ret = cam->SetVideoSubMode(ins_camera::SubVideoMode::VIDEO_NORMAL);
 if (!ret) {
     std::cout << "change submode failed!" << std::endl;
