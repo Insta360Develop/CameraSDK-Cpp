@@ -156,7 +156,7 @@ Once the camera is opened, an http tunnel is created at http://localhost:9099. Y
 The full url might look like this: http://localhost:9099/DCIM/Camera01/IMG_20200312_113006_00_261.jpg
 
 ### <a name='recording' />Recording
-Recording is as simple as taking picture
+Recording is as simple as taking picture:
 
 ```
 // only for X4.  When using X4, you need to switch to the corresponding shooting mode first.    
@@ -200,7 +200,7 @@ for(auto& origin_url: origins) {
     LOG(INFO) << "url:" << origin_url;
 }
 ```
-Same as Picture, you can access the video via http request. The returned MediaUrl instance may contain multiple origin urls as well as low bitrate video urls.
+Same as taking picture, you can access the video via http request. The returned MediaUrl instance may contain multiple origin urls as well as low bitrate video urls.
 
 ### <a name="exposure-settings" />Set Exposure Settings
 Exposure settings are independent between function modes(like TakePicture and Recording). So you need to specify function mode when you set exposure settings.
