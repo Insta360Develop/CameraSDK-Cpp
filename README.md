@@ -19,7 +19,6 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 | Platform | Version |
 | :--- | :--- |
 | Windows | Windows 7 or later, only x64 supported |
-| MacOS | 10.8.2 or later, only x64 supported |
 | Linux | Ubuntu 16.04, 18.04, 20.04, 22.04 (x86_64), other distributions need to be tested |
 
 
