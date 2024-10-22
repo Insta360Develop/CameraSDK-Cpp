@@ -30,6 +30,7 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 - [Run Test Demo](#running-demo)
 - [Get Started](#get-started)
   + [Discover and Connect to Camera](#connect)
+  + [Preview](#preview)
   + [Take Picture](#takepicture)
   + [Record Video](#recording)
   + [Set Exposure Settings](#exposure-settings)
@@ -133,6 +134,10 @@ if(!cam.Open()) {
 cam.Close(); // close the connection after use.
 ```
 After **cam.Open()**, the DeviceDescriptor is no longer used.
+
+### <a name='preview' />Preview
+The SDK allows you to obtain unstitched dual-fisheye preview stream encoded in H.264.  
+For the X4, the preview stream resolution cannot be adjusted and is set to 832x1664 by default. For other models, the preview stream resolution must be set first.
 
 ### <a name='takepicture' />Take Picture
 We try to simplify the SDK to make integration for developers more easily.
