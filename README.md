@@ -43,13 +43,13 @@ Before running the test demo, there are several steps that need to be prepared.
 By default, when you connect Insta360 cameras to your computer, the camera will switch to udisk mode automatically, making the camera act as a USB storage device.
 You need to switch the camera to the correct mode before you can connect and control it.
 
-#### For ONE X
+#### ONE X
 
 You need to upgrade to  a special version of firmware, [download it here](https://insta360-dev.oss-cn-hangzhou.aliyuncs.com/developer/releases/a33b3362-4767-47c3-ba9d-6ed07febb210.zip)
 
 After upgrading, on camera, go to settings, find USB, set it to **Android** mode.
 
-#### For ONE R/RS
+#### ONE R/RS
 
 On the camera, swipe down the screen to the main menu, go to Settings->General, set USB Mode to **Android**, and set U-Disk Mode to **Mobile** Mode.
 
