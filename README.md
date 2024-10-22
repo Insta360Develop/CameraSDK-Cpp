@@ -1,3 +1,5 @@
+Please visit [https://www.insta360.com/sdk/apply](https://www.insta360.com/sdk/apply) to apply for the latest SDK.
+
 # CameraSDK-Cpp
 CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 
@@ -59,6 +61,9 @@ On the camera, swipe down the screen to the main menu, go to Settings->General, 
 
 On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**
 
+#### X4
+
+Connect the device via USB and select **Android Mode** on the camera screen
 
 
 
