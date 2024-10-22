@@ -57,15 +57,15 @@ On the camera, swipe down the screen to the main menu, go to Settings->General, 
 
 #### ONE X2
 
-On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**
+On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**.
 
 #### X3 
 
-On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**
+On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**.
 
 #### X4
 
-Connect the device via USB and select **Android Mode** on the camera screen
+Connect the device via USB and select **Android Mode** on the camera screen.
 
 
 
