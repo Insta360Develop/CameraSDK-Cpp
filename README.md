@@ -1,4 +1,4 @@
-# How to get?
+## How to get?
 Please visit [https://www.insta360.com/sdk/apply](https://www.insta360.com/sdk/apply) to apply for the latest SDK.
 
 # CameraSDK-Cpp
