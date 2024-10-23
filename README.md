@@ -102,7 +102,7 @@ sudo ./CameraSDKDemo //for ubuntu
 **On Windows**, please make sure libusbK driver is installed. You could do that by install [libusbK](https://sourceforge.net/projects/libusbk/files/libusbK-release/3.0.7.0/) directly, or using [zadig](https://zadig.akeo.ie/) to help install the libusbK driver.	
 
 ## <a name="get-started" />Get Started
-### <a name="connect" />Discover and connect to camera.
+### <a name="connect" />Discover and connect to camera
 When both of your camera and computer are prepared, you can connect your camera to your computer via USB type-c.
 #### Discover your camera
 You can use class DeviceDiscovery to easily find available cameras.
@@ -165,7 +165,7 @@ std::cout << "Take picture done: " << url.GetSingleOrigin() << std::endl;
 Once the camera is opened, an http tunnel is created at http://localhost:9099. You can make an http request to access the images on the camera.
 The full url might look like this: http://localhost:9099/DCIM/Camera01/IMG_20200312_113006_00_261.jpg
 
-### <a name='recording' />Recording
+### <a name='recording' />Record
 Recording is as simple as taking picture:
 
 ```
