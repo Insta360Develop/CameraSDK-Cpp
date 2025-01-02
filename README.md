@@ -139,7 +139,7 @@ The SDK allows you to obtain unstitched dual-fisheye preview stream encoded in H
 For the X4, the preview stream resolution cannot be adjusted and is set to 832x1664 by default. For other models, the preview stream resolution must be set first.
 
 ### <a name='takepicture' />Take Picture
-We try to simplify the SDK to make integration for developers more easily.
+We try to simplify the SDK to make integration for developers more easily. The SDK is designed for 360 mode and does not support operations in single-lens mode.
 
 ```
 // Only for X4.  When shooting X4, you need to switch to the corresponding shooting mode first.
