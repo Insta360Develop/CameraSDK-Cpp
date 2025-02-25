@@ -24,7 +24,7 @@ CameraSDK-Cpp is a C++ library to control Insta360 cameras.
 
 ## Table of contents
 - [Prerequisite](#prerequistie)
-  - [Set Up Your Camera Connection Mode](#setup-camera)
+  - [Set up Your Camera Connection Mode](#setup-camera)
   - [Install Driver](#install-driver)
 - [Run Test Demo](#running-demo)
 - [Get Started](#get-started)
@@ -52,15 +52,15 @@ After upgrading, on camera, go to settings, find USB, set it to **Android** mode
 
 #### ONE R/RS
 
-On the camera, swipe down the screen to the main menu, go to Settings->General, set USB Mode to **Android**, and set U-Disk Mode to **Mobile** Mode.
+On the camera, swipe down on the screen to the main menu, go to Settings->General, set USB Mode to **Android**, and set U-Disk Mode to **Mobile** Mode.
 
 #### ONE X2
 
-On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**.
+On the camera, swipe down on the screen to the main menu, go to Settings->General, and set USB Mode to **Android**.
 
 #### X3 
 
-On the camera, swipe down the screen to the main menu, go to Settings->General, and set USB Mode to **Android**.
+On the camera, swipe down on the screen to the main menu, go to Settings->General, and set USB Mode to **Android**.
 
 #### X4
 
@@ -213,7 +213,7 @@ for(auto& origin_url: origins) {
 Same as taking picture, you can access the video via http request. The returned MediaUrl instance may contain multiple origin urls as well as low bitrate video urls.
 
 ### <a name="exposure-settings" />Set Exposure Settings
-Exposure settings are independent between function modes(like TakePicture and Recording). So you need to specify function mode when you set exposure settings.
+Exposure settings are independent between function modes (like TakePicture and Recording). Therefore, you need to specify the function mode when you set exposure settings.
 ```C++
 #include <camera/camera.h>
 ...
